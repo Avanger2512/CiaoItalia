@@ -1,0 +1,20 @@
+.header
+  &__top
+    padding: 10px 0
+    border-bottom: 1px solid $green
+    overflow: hidden
+  &__link
+    display: inline-block
+    padding: 0 40px
+    font-size: 11px
+    text-transform: uppercase
+    color: $black
+    line-height: 1.9
+    +tr(opacity .2s)
+    +ubuntu-l
+    &:not(:last-child)
+      border-right: 1px solid $green
+    &:last-child
+      margin-right: -40px
+    &:hover
+      opacity: 0.7

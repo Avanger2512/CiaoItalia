@@ -1,1 +1,55 @@
-<p>Hello from partials/_header.html</p>
+<header class="header">
+  <div class="header__top">
+    <div class="container text-right">
+      <a href="tel:+380972222222" class="header__link">+38 097 222 22 22</a>
+      <a href="mailto:email@bisnestur.com?subject=Menu-feedback" class="header__link">email@bisnestur.com</a>
+    </div>
+  </div>
+
+  <div class="header__content">
+    <div class="container">
+      <div class="l l_center l_between">
+
+
+        <a href="/" class="logo header__logo">
+          Ciao <span>Italia</span>
+        </a>
+
+        {% set menu = [
+          {
+            text: 'ДЕТАЛІ ТУРУ',
+            anchor: 'details'
+          },
+          {
+            text: 'ЛОКАЦІЇ',
+            anchor: 'location'
+          },
+          {
+            text: 'ПРОГРАМА',
+            anchor: 'program'
+          },
+          {
+            text: 'ВАРТІСТЬ',
+            anchor: 'cost'
+          },
+          {
+            text: 'ПРО НАС',
+            anchor: 'about'
+          },
+          {
+            text: 'ЗАДАТИ ЗАПИТАННЯ',
+            anchor: 'question'
+          }
+          ]
+          %}
+          <nav class="header__nav nav">
+            {% for item in menu %}
+            <a href="#" class="nav__link js-go-to" data-go="{{item.anchor}}"> {{ item.text }}</a>
+            {% endfor %}
+          </nav>
+
+          <a href="#" class="btn btn_full-orange js-go-to">Взяти участь</a>
+        </div>
+    </div>
+  </div>
+</header>

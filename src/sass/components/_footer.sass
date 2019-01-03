@@ -1,0 +1,15 @@
+.footer
+  background: $orange
+  padding: 29px 0
+  &__item
+    display: inline-block
+    font-size: 13px
+    line-height: 1
+    color: #fff
+    +ubuntu-l
+    &:not(.upper)
+      max-width: 140px
+    &:not(div)
+      +tr(opacity .15s)
+      &:hover
+        opacity: .8

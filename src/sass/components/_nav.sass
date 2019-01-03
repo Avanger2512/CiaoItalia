@@ -1,0 +1,21 @@
+$nav-margin: 40px
+
+.nav
+  display: flex
+  flex-flow: row nowrap
+  align-items: center
+  justify-content: space-between
+  margin: 0 -#{$nav-margin}
+  &__link
+    display: inline-block
+    font-size: 13px
+    color: $black
+    margin: 0 $nav-margin
+    line-height: 100px
+    text-transform: uppercase
+    border-bottom: 1px solid transparent
+    +tr(border-bottom-color .2s ease-in-out)
+    +ubuntu-l
+
+    &:hover
+      border-bottom-color: $green

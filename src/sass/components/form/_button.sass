@@ -1,0 +1,47 @@
+.btn
+  display: inline-block
+  vertical-align: middle
+  font-size: 18px
+  border-radius: 24px
+  border: 1px solid transparent
+  text-align: center
+  padding: 12px 23px 13px
+  transition: background .2s, border-color .2s
+  +lora-i
+
+  &_width
+    max-width: 100%
+
+  &_full-orange
+    background: $orange
+    color: #fff
+    &:hover
+      background: $dark-orange
+
+  &_full-green
+    background: $green
+    color: #fff
+
+  &_full-white
+    background: #fff
+    color: $orange
+
+  &:disabled
+    background: gray
+    color: #fff
+
+  &_border-orange
+    border-bottom-color: $orange
+    color: $orange
+
+  &_border-white
+    border-bottom-color: #fff
+    color: #fff
+
+  &_border-green
+    border-bottom-color: $green
+    color: $green
+
+  &_md
+    font-size: 22px
+    padding: 10px 20px
