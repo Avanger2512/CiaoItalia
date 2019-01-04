@@ -1,13 +1,24 @@
 .container
-  max-width: 1590px
+  max-width: 1570px
   width: 100%
   padding: 0 20px
   margin: 0 auto
+  +r(1400)
+    max-width: 1280px
+    padding: 0 45px
+  +r(1200)
+    padding: 0 30px
+  +xs
+    padding: 0 20px
+
 
 
 .l
   display: flex
   flex-flow: row nowrap
+  &:not(.l_not-col)
+    +xs
+      flex-direction: column
   &_stretch
     align-items: stretch
   &_center
@@ -19,3 +30,12 @@
 
   &__col
     flex: 1 0 auto
+  &__col-order-1-xs
+    +xs
+      order: 1
+  &__col-order-2-xs
+    +xs
+      order: 2
+  &__col-order-3-xs
+    +xs
+      order: 3

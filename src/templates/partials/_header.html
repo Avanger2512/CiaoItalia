@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header js-header">
   <div class="header__top">
     <div class="container text-right">
       <a href="tel:+380972222222" class="header__link">+38 097 222 22 22</a>
@@ -8,11 +8,11 @@
 
   <div class="header__content">
     <div class="container">
-      <div class="l l_center l_between">
+      <div class="l l_not-col l_center l_between">
 
 
         <a href="/" class="logo header__logo">
-          Ciao <span>Italia</span>
+          Ciao&nbsp;<span>Italia</span>
         </a>
 
         {% set menu = [
@@ -42,13 +42,23 @@
           }
           ]
           %}
-          <nav class="header__nav nav">
-            {% for item in menu %}
-            <a href="#" class="nav__link js-go-to" data-go="{{item.anchor}}"> {{ item.text }}</a>
-            {% endfor %}
-          </nav>
+          <div class="header__menu">
+            <nav class="header__nav nav">
+              {% for item in menu %}
+              <a href="#" class="nav__link js-go-to" data-go="{{item.anchor}}"> {{ item.text }}</a>
+              {% endfor %}
+            </nav>
 
-          <a href="#" class="btn btn_full-orange js-go-to">Взяти участь</a>
+            <a href="#" class="btn btn_full-orange js-go-to header__menu-hidden">Взяти участь</a>
+          </div>
+
+          <a href="#" class="btn btn_full-orange btn_sm-mob js-go-to header__btn">Взяти участь</a>
+
+          <button type="button" name="button" class="burger js-burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
         </div>
     </div>
   </div>

@@ -1,12 +1,18 @@
 .header
+  $this: &
+  &.is-menu-open
+    #{$this}__btn
+      opacity: 0
+    #{$this}__menu
+      display: block
   &__top
     padding: 10px 0
     border-bottom: 1px solid $green
     overflow: hidden
   &__link
     display: inline-block
-    padding: 0 40px
     font-size: 11px
+    letter-spacing: 1px
     text-transform: uppercase
     color: $black
     line-height: 1.9
@@ -14,7 +20,67 @@
     +ubuntu-l
     &:not(:last-child)
       border-right: 1px solid $green
+      padding-right: 38px
+      margin-right: 37px
+      +sm
+        padding-right: 19px
+        margin-right: 16px
     &:last-child
-      margin-right: -40px
+      +sm
+        font-size: 10px
+      +xs
+        margin-right: 0
     &:hover
       opacity: 0.7
+  &__logo
+    margin-top: -8px
+  &__menu
+    +md
+      display: none
+      position: absolute
+      top: 100%
+      left: 0
+      right: 0
+      background: #fff
+      z-index: 9
+      text-align: center
+  &__menu-hidden
+    +rmin(980)
+      display: none
+      
+  &__content
+    position: relative
+  &__btn
+    +xs
+      display: none
+
+.burger
+  position: relative
+  display: block
+  width: 32px
+  height: 14px
+  +rmin(980)
+    display: none
+  &.is-active
+    width: 20px
+    span:first-child
+      transform: rotate(45deg)
+      top: 6px
+    span:last-child
+      transform: rotate(-45deg)
+      top: 6px
+    span:nth-child(2)
+      transform: scale(0)
+  > span
+    position: absolute
+    left: 0
+    width: 100%
+    height: 2px
+    background: $orange
+    +tr(transform .3s ease-in-out)
+    &:first-child
+      top: 0
+    &:nth-child(2)
+      top: 6px
+    &:last-child
+      top: 12px
