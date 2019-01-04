@@ -21,15 +21,22 @@
       flex-direction: column
   &_stretch
     align-items: stretch
+    height: 100%
   &_center
     align-items: center
+  &_content-right
+    justify-content: flex-end
   &_between
     justify-content: space-between
   &_around
     justify-content: space-around
-
+  &_half
+    .l__col
+      max-width: 50%
+      flex-basis: 50%
   &__col
     flex: 1 0 auto
+
   &__col-order-1-xs
     +xs
       order: 1

@@ -5,11 +5,137 @@ title: Index page
 
 {% block content %}
 
-	<div class="container">
-		<a href="/" class="btn btn_full-orange btn_md">Взяти участь</a>
-		{# mixin example #}
-		{{mixins.icon('facebook')}}
-	</div>
+	<section class="section section_vh" style="background-image: url('img/city.jpg')">
+		<div class="l l_stretch l_content-right l_half">
+			<div class="l__col">
+				<div class="section__item section__item_image text-center" style="background-image: url('img/city-2.jpg')">
+					<h1>«Ciao Italia!<br> Готуй і подорожуй»</h1>
+					<div class="desc-sm"> Бізнес-тур для менеджерів ресторанного бізнесу та всіх, хто хоче познайомитись з тонкощами італійської кухні!</div>
+
+
+					<div class="decor-block">
+						{{mixins.icon('decor-line-top')}}
+
+						<div class="h5 decor-block__text">5-12 квітня 2019</div>
+
+						{{mixins.icon('decor-line-bottom')}}
+					</div>
+
+					<div class="counter">
+						<div class="counter__title">До початку туру залишилось:</div>
+						<div class="counter__in js-counter" data-counter="Apr 5, 2019 00:00:00">
+							<div class="counter__item">
+								<div class="counter__meta js-counter-days"></div>
+								<div class="conter__desc">днів</div>
+							</div>
+							<div class="counter__item">
+								<div class="counter__meta js-counter-hours"></div>
+								<div class="conter__desc">годин</div>
+							</div>
+							<div class="counter__item">
+								<div class="counter__meta js-counter-minutes"></div>
+								<div class="counter__desc">хвилин</div>
+							</div>
+
+						</div>
+					</div>
+
+					<button class="section__button" type="button">
+						{{mixins.icon('arr-down')}}
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="section">
+		<div class="l l_stretch l_content-right l_half">
+			<div class="l__col">
+				<div class="section__item section__item_mod text-center">
+					<div class="section__col">
+						<div class="section__caption section__caption_border">6 насичених днів:</div>
+						<div class="h4">Подорож регіоном Венетто від моря до гір!</div>
+						{% set list = ['Венеція', 'Бурано', 'Чивідале-дель-Фріул', 'Сауріс', 'Трієст']%}
+						<ul class="style-list">
+							{% for item in list %}
+							<li class="style-list__item">{{ item }}</li>
+							{% endfor%}
+						</ul>
+						<button class="btn btn_border-green">Дізнатися більше</button>
+					</div>
+					<div class="section__col section__col_orange">
+						<div class="places places_white">
+
+							<div class="places__title">Залишилось місць:</div>
+							<div class="places__in h2">
+								<svg viewBox="0 -12  130 155">
+								   <circle cx="65" cy="65" r="72" style="stroke:#fff; fill:none"/>
+								</svg>
+								<span>5</span>
+							</div>
+							<button class="btn btn_border-white">Дізнатися більше</button>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="l__col">
+				<div class="section__item">
+					<div class="slider js-slider-city">
+						{% for i in range(0,5) %}
+						<div><img src="./img/buildings.jpg" alt=""></div>
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+
+	<section class="section section_gup">
+		<div class="text-center">
+			<h2>Що в програмі туру:</h2>
+
+			{% set imageList = [
+				{
+					img: 'chief-cooker',
+					text: 'Приготування традиційних італійських страв у супроводі знаменитого шеф-кухар'
+				},
+				{
+					img: 'restaurant',
+					text: '100% занурення в техніку роботи  італійських ресторанів'
+				},
+				{
+					img: 'cheese',
+					text: 'Знайомства з  виноробами, власниками фабрик  прошутто, сирів'
+				},
+				{
+					img: 'master-classes',
+					text: 'Майстер-класи по Стандартам якості, фудкосту, мотивації  персоналу, сервісу'
+				},
+				{
+					img: 'wine',
+					text: 'Лекції від сомельє'
+				}
+				]%}
+			<ul class="image-list">
+				{% for item in imageList %}
+				<li class="image-list__item">
+					<img src="./img/{{ item.img }}.svg" alt="">
+					<div class="desc-sm">{{ item.text }}</div>
+				</li>
+				{% endfor %}
+			</ul>
+
+			<div class="section__decor"></div>
+		</div>
+
+		<div class="text-center">
+			<div class="h2">Для кого тур?</div>
+		</div>
+	</section>
+
 
 
 {% endblock %}

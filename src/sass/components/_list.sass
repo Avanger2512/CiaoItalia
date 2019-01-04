@@ -1,0 +1,36 @@
+.style-list
+  margin: 40px 0
+  font-size: 0
+  &__item
+    position: relative
+    display: inline-block
+    vertical-align: middle
+    font-size: 16px
+    +ubuntu-l
+    &:not(:last-child)
+      padding-right: 24px
+      margin-right: 20px
+      &:after
+        content: ''
+        position: absolute
+        right: 0
+        top: 6px
+        width: 8px
+        height: 8px
+        border-radius: 50%
+        background: $green
+
+
+.image-list
+  font-size: 0
+  max-width: 65%
+  margin: 0 auto 80px
+  &__item
+    display: inline-block
+    vertical-align: top
+    width: 20%
+    text-align: center
+    padding: 0 2%
+    > img
+      max-width: 150px
+      margin-bottom: 40px

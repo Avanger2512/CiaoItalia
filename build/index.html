@@ -24,6 +24,7 @@
           <div class="l l_not-col l_center l_between">
             <a href="/" class="logo header__logo"> Ciao&nbsp;<span>Italia</span>
             </a>
+            <!-- TODO: Need add GOTO  -->
             <div class="header__menu">
               <nav class="header__nav nav">
                 <a href="#" class="nav__link js-go-to" data-go="details"> ДЕТАЛІ ТУРУ</a>
@@ -33,8 +34,10 @@
                 <a href="#" class="nav__link js-go-to" data-go="about"> ПРО НАС</a>
                 <a href="#" class="nav__link js-go-to" data-go="question"> ЗАДАТИ ЗАПИТАННЯ</a>
               </nav>
+              <!-- TODO: Need add GOTO  -->
               <a href="#" class="btn btn_full-orange js-go-to header__menu-hidden">Взяти участь</a>
             </div>
+            <!-- TODO: Need add GOTO  -->
             <a href="#" class="btn btn_full-orange btn_sm-mob js-go-to header__btn">Взяти участь</a>
             <button type="button" name="button" class="burger js-burger">
               <span></span>
@@ -47,12 +50,121 @@
     </header>
     <!-- END header -->
     <!-- BEGIN content -->
-    <div class="container">
-      <a href="/" class="btn btn_full-orange btn_md">Взяти участь</a>
-      <svg class="icon icon-facebook">
-        <use xlink:href="img/sprite.svg#icon-facebook"></use>
-      </svg>
-    </div>
+    <section class="section section_vh" style="background-image: url('img/city.jpg')">
+      <div class="l l_stretch l_content-right l_half">
+        <div class="l__col">
+          <div class="section__item section__item_image text-center" style="background-image: url('img/city-2.jpg')">
+            <h1>«Ciao Italia!<br> Готуй і подорожуй»</h1>
+            <div class="desc-sm"> Бізнес-тур для менеджерів ресторанного бізнесу та всіх, хто хоче познайомитись з тонкощами італійської кухні!</div>
+            <div class="decor-block">
+              <svg class="icon icon-decor-line-top">
+                <use xlink:href="img/sprite.svg#icon-decor-line-top"></use>
+              </svg>
+              <div class="h5 decor-block__text">5-12 квітня 2019</div>
+              <svg class="icon icon-decor-line-bottom">
+                <use xlink:href="img/sprite.svg#icon-decor-line-bottom"></use>
+              </svg>
+            </div>
+            <div class="counter">
+              <div class="counter__title">До початку туру залишилось:</div>
+              <div class="counter__in js-counter" data-counter="Apr 5, 2019 00:00:00">
+                <div class="counter__item">
+                  <div class="counter__meta js-counter-days"></div>
+                  <div class="conter__desc">днів</div>
+                </div>
+                <div class="counter__item">
+                  <div class="counter__meta js-counter-hours"></div>
+                  <div class="conter__desc">годин</div>
+                </div>
+                <div class="counter__item">
+                  <div class="counter__meta js-counter-minutes"></div>
+                  <div class="counter__desc">хвилин</div>
+                </div>
+              </div>
+            </div>
+            <button class="section__button" type="button">
+              <svg class="icon icon-arr-down">
+                <use xlink:href="img/sprite.svg#icon-arr-down"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="l l_stretch l_content-right l_half">
+        <div class="l__col">
+          <div class="section__item section__item_mod text-center">
+            <div class="section__col">
+              <div class="section__caption section__caption_border">6 насичених днів:</div>
+              <div class="h4">Подорож регіоном Венетто від моря до гір!</div>
+              <ul class="style-list">
+                <li class="style-list__item">Венеція</li>
+                <li class="style-list__item">Бурано</li>
+                <li class="style-list__item">Чивідале-дель-Фріул</li>
+                <li class="style-list__item">Сауріс</li>
+                <li class="style-list__item">Трієст</li>
+              </ul>
+              <button class="btn btn_border-green">Дізнатися більше</button>
+            </div>
+            <div class="section__col section__col_orange">
+              <div class="places places_white">
+                <div class="places__title">Залишилось місць:</div>
+                <div class="places__in h2">
+                  <svg viewBox="0 -12  130 155">
+                    <circle cx="65" cy="65" r="72" style="stroke:#fff; fill:none" />
+                  </svg>
+                  <span>5</span>
+                </div>
+                <button class="btn btn_border-white">Дізнатися більше</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="l__col">
+          <div class="section__item">
+            <div class="slider js-slider-city">
+              <div><img src="./img/buildings.jpg" alt=""></div>
+              <div><img src="./img/buildings.jpg" alt=""></div>
+              <div><img src="./img/buildings.jpg" alt=""></div>
+              <div><img src="./img/buildings.jpg" alt=""></div>
+              <div><img src="./img/buildings.jpg" alt=""></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section_gup">
+      <div class="text-center">
+        <h2>Що в програмі туру:</h2>
+        <ul class="image-list">
+          <li class="image-list__item">
+            <img src="./img/chief-cooker.svg" alt="">
+            <div class="desc-sm">Приготування традиційних італійських страв у супроводі знаменитого шеф-кухар</div>
+          </li>
+          <li class="image-list__item">
+            <img src="./img/restaurant.svg" alt="">
+            <div class="desc-sm">100% занурення в техніку роботи італійських ресторанів</div>
+          </li>
+          <li class="image-list__item">
+            <img src="./img/cheese.svg" alt="">
+            <div class="desc-sm">Знайомства з виноробами, власниками фабрик прошутто, сирів</div>
+          </li>
+          <li class="image-list__item">
+            <img src="./img/master-classes.svg" alt="">
+            <div class="desc-sm">Майстер-класи по Стандартам якості, фудкосту, мотивації персоналу, сервісу</div>
+          </li>
+          <li class="image-list__item">
+            <img src="./img/wine.svg" alt="">
+            <div class="desc-sm">Лекції від сомельє</div>
+          </li>
+        </ul>
+        <div class="section__decor"></div>
+      </div>
+      <div class="text-center">
+        <div class="h2">Для кого тур?</div>
+      </div>
+    </section>
     <!-- END content -->
     <!-- BEGIN footer -->
     <footer class="footer">
