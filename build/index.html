@@ -111,10 +111,10 @@
               <div class="places places_white">
                 <div class="places__title">Залишилось місць:</div>
                 <div class="places__in h2">
-                  <svg viewBox="0 -12  130 155">
+                  <svg viewBox="0 -12  130 155" class="places__circle">
                     <circle cx="65" cy="65" r="72" style="stroke:#fff; fill:none" />
                   </svg>
-                  <span>5</span>
+                  <span class="places__center">5</span>
                 </div>
                 <button class="btn btn_border-white">Дізнатися більше</button>
               </div>
@@ -159,12 +159,100 @@
             <div class="desc-sm">Лекції від сомельє</div>
           </li>
         </ul>
-        <div class="section__decor"></div>
+        <div class="section__decor section__decor_orange"></div>
       </div>
       <div class="text-center">
         <div class="h2">Для кого тур?</div>
       </div>
+      <div class="about-tour">
+        <div class="about-tour__item about-tour__item_men">
+          <div class="about-tour__img">
+            <img src="./img/men.jpg" alt="">
+          </div>
+          <div class="about-tour__content">
+            <svg class="icon icon-decor-line-top">
+              <use xlink:href="img/sprite.svg#icon-decor-line-top"></use>
+            </svg>
+            <div class="about-tour__desc">Для власників і менеджерів ресторанів, кафе, барів.</div>
+            <svg class="icon icon-decor-line-bottom">
+              <use xlink:href="img/sprite.svg#icon-decor-line-bottom"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="about-tour__item about-tour__item_chief">
+          <div class="about-tour__img">
+            <img src="./img/chief.jpg" alt="">
+          </div>
+          <div class="about-tour__content">
+            <svg class="icon icon-decor-line-top">
+              <use xlink:href="img/sprite.svg#icon-decor-line-top"></use>
+            </svg>
+            <div class="about-tour__desc">Для всіх, хто прагне розкрити секрети італійського ресторанного бізнесу.</div>
+            <svg class="icon icon-decor-line-bottom">
+              <use xlink:href="img/sprite.svg#icon-decor-line-bottom"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="about-tour__item about-tour__item_pizza">
+          <div class="about-tour__img">
+            <img src="./img/pizza.jpg" alt="">
+          </div>
+          <div class="about-tour__content">
+            <svg class="icon icon-decor-line-top">
+              <use xlink:href="img/sprite.svg#icon-decor-line-top"></use>
+            </svg>
+            <div class="about-tour__desc">Для тих, хто хоче розвиватись, покращувати сервіс і досягати найвищої якості!</div>
+            <svg class="icon icon-decor-line-bottom">
+              <use xlink:href="img/sprite.svg#icon-decor-line-bottom"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
     </section>
+    <div class="bg-gray">
+      <section class="section section_image" style="background-image: url('./img/kitchen.jpg')">
+        <div class="container">
+          <div class="section__meta meta">
+            <div class="h3">Приєднуйтесь до нас!</div>
+            <div class="section__decor section__decor_green meta__decor"></div>
+            <div class="title meta__title">З цієї подорожі ви привезете те тільки красиві фото, але й унікальні знання і досвід!</div>
+            <div class="places places_green">
+              <div class="places__in h2">
+                <svg viewBox="0 -12  130 155" class="places__circle">
+                  <circle cx="65" cy="65.5" r="75.5" style="stroke:#6ecdbe; fill:none" />
+                </svg>
+                <div class="places__center">
+                  <div class="places__title-in">Залишилось вільних місць:</div>
+                  <span>5</span>
+                  <svg class="icon icon-decor-line-top">
+                    <use xlink:href="img/sprite.svg#icon-decor-line-top"></use>
+                  </svg>
+                  <div class="h4">Поспішай!</div>
+                </div>
+              </div>
+            </div>
+            <button class="btn btn_full-green btn_width">Взяти участь</button>
+          </div>
+        </div>
+      </section>
+      <section class="section " style="background-image: url('img/boats.jpg')">
+        <div class="l l_stretch l_content-left l_half">
+          <div class="l__col">
+            <div class="section__item section__item_image text-center" style="background-image: url('img/boats-2.jpg')">
+              <div class="section__width">
+                <div class="h2 section__width_title">Програма туру</div>
+                <div class="decor-block">
+                  <svg class="icon icon-decor-line-top">
+                    <use xlink:href="img/sprite.svg#icon-decor-line-top"></use>
+                  </svg>
+                </div>
+                <div class="desc">Унікальна нагода поєднати відпочинок з нетворкінгом і навчанням!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
     <!-- END content -->
     <!-- BEGIN footer -->
     <footer class="footer">

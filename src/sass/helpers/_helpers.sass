@@ -34,3 +34,21 @@
 =xs
   +r(599)
     @content
+
+=border
+  &:after,
+  &:before
+    content: ''
+    position: absolute
+    background: #000
+    opacity: 0.05
+  &:after
+    right: -10px
+    top: 10px
+    bottom: 0
+    width: 10px
+  &:before
+    left: 10px
+    right: -10px
+    bottom: -10px
+    height: 10px

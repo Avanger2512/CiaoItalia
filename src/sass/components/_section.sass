@@ -1,4 +1,5 @@
 .section
+  position: relative
   background-size: cover
   background-position: 50% 50%
 
@@ -50,12 +51,25 @@
     margin: 0 auto 70px
     width: 380px
     height: 2px
+  &__decor_orange
     background-color: $orange
+  &__decor_green
+    background-color: $green
+  &__width
+    max-width: 400px
+    margin: 0 auto
+    .decor-block
+      margin: 35px 0
+  &__width_title
+    margin-bottom: 35px
+
   &_vh
     height: calc(100vh - 141px)
 
   &_gup
-    padding: 90px 0
+    padding: 90px 0 30px
+  &_image
+    max-height: 890px
 
 .decor-block
   margin: 70px 35px
@@ -92,3 +106,18 @@
   &__desc
     font-size: 16px
     +ubuntu
+
+.meta
+  position: relative
+  float: right
+  margin-top: 40px
+  text-align: center
+  background: #fff
+  max-width: 810px
+  width: 100%
+  padding: 70px 210px 80px
+  +border
+  &__title
+    margin-bottom: 40px
+  &__decor
+    margin: 40px 0 30px
