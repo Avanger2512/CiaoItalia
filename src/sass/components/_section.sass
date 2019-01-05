@@ -11,6 +11,10 @@
     background-size: cover
     background-position: 50% 50%
     padding: 70px 12%
+    display: flex
+    flex-flow: column
+    justify-content: center
+    
   &__col
     height: 50%
     display: flex
@@ -28,6 +32,10 @@
     +ubuntu-l
   &__caption_border
     border-bottom: 2px solid $green
+  &__title
+    font-size: 20px
+    margin-bottom: 50px
+    +lora-i
   &__button
     position: absolute
     bottom: 0
@@ -68,8 +76,10 @@
 
   &_gup
     padding: 90px 0 30px
+
   &_image
     max-height: 890px
+
 
 .decor-block
   margin: 70px 35px

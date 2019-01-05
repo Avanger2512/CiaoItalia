@@ -1,0 +1,26 @@
+.soc
+  $this: &
+  font-size: 0
+  &__item
+    display: inline-block
+    vertical-align: middle
+    +tr(opacity .2s ease-in-out)
+    &:hover
+      opacity: 0.8
+  .icon
+    fill: $green
+
+  &_sm
+    margin: 0 -5px
+    #{$this}__item
+      margin: 0 5px
+    .icon
+      width: 32px
+      height: 32px
+  &_md
+    margin: 0 -10px
+    #{$this}__item
+      margin: 0 10px
+    .icon
+      width: 42px
+      height: 42px

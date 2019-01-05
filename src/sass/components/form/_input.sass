@@ -1,0 +1,69 @@
+.input
+  input
+    width: 100%
+    border: 2px solid rgba(#fff, .35)
+    background: transparent
+    font-size: 12px
+    padding: 20px
+    color: #fff
+    text-transform: uppercase
+    +tr(border-color .2s ease-in-out)
+    +ubuntu
+    &:hover
+      border-color: $orange
+    &:focus
+      +placeholder
+        opacity: 0
+    +placeholder
+      font-size: 12px
+      color: #fff
+      +tr(opacity .2s)
+      +ubuntu-l
+
+
+.checkbox
+  padding: 4px 0
+  &:hover
+    label
+      &:before
+        border-color: #fff
+  input
+    position: absolute
+    z-index: -1
+    opacity: 0
+    &:checked + label:before
+      border-color: #fff
+    &:checked + label:after
+      opacity: 1
+  label
+    position: relative
+    padding: 4px 0 0 45px
+    cursor: pointer
+    font-size: 14px
+    color: #fff
+    +ubuntu-l
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 0
+      width: 24px
+      height: 24px
+      border: 2px solid rgba(#fff, .35)
+      background: trasparent
+      transition: border-color .2s ease-in-out, opacity .2s ease-in-out
+    &:after
+      content: ''
+      position: absolute
+      opacity: 0
+      top: 8px
+      left: 8px
+      width: 8px
+      height: 8px
+      background: #fff
+      +tr(border-color .2s ease-in-out)
+    > a
+      color: $green
+      text-decoration: underline
+      &:hover
+        text-decoration: none

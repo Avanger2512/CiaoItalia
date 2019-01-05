@@ -38,6 +38,14 @@
     .l__col
       max-width: 50%
       flex-basis: 50%
+  &_not-half
+    .l__col
+      &:first-child
+        max-width: 45%
+        flex-basis: 45%
+      &:last-child
+        max-width: 55%
+        flex-basis: 55%
   &__col
     flex: 1 0 auto
 

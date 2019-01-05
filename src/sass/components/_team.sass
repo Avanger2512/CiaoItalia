@@ -1,0 +1,83 @@
+.team
+  position: relative
+  // max-width: 1290px
+  width: calc(100% - 240px)
+  margin: 80px auto
+  font-size: 0
+  &:not(.is-slider-init)
+    .team__arr
+      display: none
+  +r(1400)
+    width: calc(100% - 180px)
+  &__in
+    height: 100%
+    margin: 0 -5px
+  &__item
+    display: inline-block
+    vertical-align: top
+    padding: 20px
+    text-align: center
+    // max-width: 250px
+    width: calc(20% - 10px)
+    white-space: normal
+    background: #fff
+    position: relative
+    margin: 0 5px 10px
+    &:before
+      content: ''
+      position: absolute
+      background: #000
+      opacity: 0.05
+      left: 10px
+      right: 10px
+      bottom: -10px
+      height: 10px
+    &:last-child
+      margin-right: 5px
+  &__ava
+    max-width: 150px
+    width: 100%
+    border-radius: 50%
+    overflow: hidden
+    margin: 0 auto 40px
+    img
+      object-fit: cover
+  &__name
+    font-size: 20px
+    padding-bottom: 40px
+    margin: 0 auto 40px
+    border-bottom: 2px solid $green
+    +lora-bi
+  &__desc
+    font-size: 14px
+    margin-bottom: 40px
+    +ubuntu-l
+  &__arr
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    margin-top: -4px
+    width: 120px
+    height: 80px
+    background: $orange
+    +tr(background .2s)
+    &:hover
+      background: $dark-orange
+    +r(1400)
+      width: 90px
+    .icon
+      position: absolute
+      top: 50%
+      transform: translateY(-50%)
+      fill: #fff
+      font-size: 10px
+  &__arr-prev
+    right: calc(100% - 5px)
+    .icon
+      left: 30px
+  &__arr-next
+    left: calc(100% + 5px)
+    .icon
+      right: 30px
+  .slick-slide
+    margin: 0 5px

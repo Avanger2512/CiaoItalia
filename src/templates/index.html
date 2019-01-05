@@ -174,20 +174,162 @@ title: Index page
 						<div class="section__width">
 							<div class="h2 section__width_title">Програма туру</div>
 
-
 							<div class="decor-block">
 								{{mixins.icon('decor-line-top')}}
 							</div>
 
 							<div class="desc">Унікальна нагода поєднати відпочинок з нетворкінгом і навчанням!</div>
+
 						</div>
-
-
 					</div>
 				</div>
 			</div>
 		</section>
+		<div class="container">
+			{% include './partials/_accordions.html' %}
+
+			{% include './partials/_download.html'%}
+		</div>
 	</div>
+
+	<section class="section section_gup">
+		<div class="text-center">
+			<div class="h2">Вартість туру</div>
+		</div>
+
+		<div class="container">
+			<div class="cost">
+				<div class="cost__item is-active">
+					<div class="cost__decor decor-block">
+						{{mixins.icon('decor-line-top')}}
+
+						<div class="cost__decor-in">
+							<div class="title">Зараз</div>
+							<div class="h3">1800€</div>
+						</div>
+
+						{{mixins.icon('decor-line-bottom')}}
+					</div>
+
+					<button type="button" name="button" class="btn cost__btn">Взяти участь</button>
+				</div>
+				<div class="cost__item">
+					<div class="cost__decor decor-block">
+						{{mixins.icon('decor-line-top')}}
+
+						<div class="cost__decor-in">
+							<div class="title">з 15 лютого</div>
+							<div class="h3">1999€</div>
+						</div>
+
+						{{mixins.icon('decor-line-bottom')}}
+					</div>
+
+					<button type="button" name="button" class="btn cost__btn">Взяти участь</button>
+				</div>
+				<div class="cost__item">
+					<div class="cost__decor decor-block">
+						{{mixins.icon('decor-line-top')}}
+
+						<div class="cost__decor-in">
+							<div class="title">з 01 березня</div>
+							<div class="h3">2099€</div>
+						</div>
+
+						{{mixins.icon('decor-line-bottom')}}
+					</div>
+
+					<button type="button" name="button" class="btn cost__btn">Взяти участь</button>
+				</div>
+			</div>
+
+			<div class="section__decor section__decor_green"></div>
+
+			<div class="cost-additional">
+				<div class="cost-additional__col">
+					<div class="cost-additional__title">У вартість включено:</div>
+
+					{% set include = ['Проживання в 2-місному номері «стандарт»','Харчування НВ (сніданки, обіди/вечері) + всі дегустації','Всі екскурсії, майстер-класи, зустрічі','Страхування на час туру','Бонусом для кожного учасника буде індивідуальна консультація щодо вашого бізнесу від італійських партнерів']%}
+					<ul class="style-list style-list_width">
+						{% for item in include %}
+						<li class="style-list__item">{{ item }}</li>
+						{% endfor %}
+					</ul>
+				</div>
+				<div class="cost-additional__col">
+					<div class="cost-additional__title">Додатково оплачується:</div>
+
+					{% set notInclude = ['Переліт (ми можемо придбати авіа-квитки для Вас або проконсультувати щодо купівлі квитків)','Проживання в номерах підвищеного комфорту']%}
+
+					<ul class="style-list style-list_width">
+						{% for item in notInclude %}
+						<li class="style-list__item">{{ item }}</li>
+						{% endfor %}
+					</ul>
+				</div>
+			</div>
+
+			<div class="text-center">
+				<div class="section__title">Ми хочемо, щоб усім було комфортно і кожен міг отримати індивідуальний підхід, тому кількість місць в турі 12-15.</div>
+			</div>
+
+		</div>
+
+	</section>
+
+
+	<section class="section section_gup bg-gray">
+		<div class="container text-center">
+			<div class="h3"> У нас збирається справді крута команда:</div>
+
+			<div class="container">
+				{% include './partials/_team.html' %}
+			</div>
+		</div>
+	</section>
+
+
+	<section class="section">
+		<div class="l l_not-half l_stretch ">
+			<div class="l__col">
+				<div class="section__width">
+					<div class="container">
+						<div class="h3">Станьте учасником бізнес-туру</div>
+						<p>Зателефонуйте нам, або заповніть форму і ми зв’яжимося з вами для уточнення всіх нюансів.</p>
+
+						<a href="tel:+380972222222" class="">+38 097 222 22 22</a>
+						<a href="tel:+380972222233" class="">+38 097 222 22 33</a>
+						<a href="mailto:email@bisnestur.com?subject=Form-feedback">email@bisnestur.com</a>
+					</div>
+				</div>
+			</div>
+			<div class="l__col bg-black">
+				<form action="/" class="form">
+					<div class="form__title desc">Залиште свої контакти щоб дізнатися деталі</div>
+					<div class="form__line">
+						<div class="input">
+							<input type="text" name="name" placeholder="Ваше ім’я:">
+						</div>
+					</div>
+					<div class="form__line">
+						<div class="input">
+							<input type="tel" name="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="ТЕЛЕФОН:">
+						</div>
+					</div>
+					<div class="form__line">
+						<div class="checkbox">
+							<input type="checkbox" id="privacy"
+       				required >
+							<label for="privacy">Я приймаю <a href="/privacy.html" target="_blank">політику конфеденційності</a></label>
+						</div>
+					</div>
+					<div class="form__btn">
+						<button type="submit" name="button" class="btn btn_width btn_full-orange">Надіслати</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</section>
 
 
 

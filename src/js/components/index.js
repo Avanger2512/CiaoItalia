@@ -1,6 +1,7 @@
 import './burger'
 import './counter'
 import './slider'
+import './accordion'
 
 
 

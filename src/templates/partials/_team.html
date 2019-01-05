@@ -1,0 +1,68 @@
+{% set teams = [
+  {
+    pic: '1',
+    name: 'Luisella <br>Lovecchio',
+    desc: '20 років практики в управлінні проектами з розвитку та виходу на міжнародні рівні компаній, проджект менеджер міжнародними компаніями (Євросоюз, Україна та Росія)'
+  },
+  {
+    pic: '2',
+    name: 'Giannola Bulfoni<br>Nonino',
+    desc: 'Bласниця фабрики і  легендарного бренду грапи NONINO. Бренду NONINO виповнилось 128 років, щороку фабрика експериментує зі смаками,  виробляє … пляшок грапи, які експортуються в … країн.'
+  },
+  {
+    pic: '3',
+    name: 'Андрій <br> Цура',
+    desc: '(організатор, гід по Італії)– фаховий знавець італійської культури та мови. 15 років досвіду в залученні іноземного бізнесу в Україну. Організація та управління бізнес проектами та іноземними компаніями в Україні. Власник консалтингової компанії'
+  },
+  {
+    pic: '4',
+    name: 'Наталя <br> Гаріна',
+    desc: '(організатор, тренер) – бізнес-коуч, експерт в HR, ведуча програм розвитку для менеджерів,  власник консалтингового проекту'
+  },
+  {
+    pic: '5',
+    name: 'Роман <br> Грицьків',
+    desc: '(організатор, тренер) -  Директор HBPI company ltd, керівник проекту туристичний клуб "ЧОВЕН", консультант та міжнародний аудитор систем управління якістю (ISO 9001) та систем харчової безпеки (HACCP, ISO 22000)'
+  },
+  {
+    pic: '5',
+    name: 'Роман <br> Грицьків',
+    desc: '(організатор, тренер) -  Директор HBPI company ltd, керівник проекту туристичний клуб "ЧОВЕН", консультант та міжнародний аудитор систем управління якістю (ISO 9001) та систем харчової безпеки (HACCP, ISO 22000)'
+  }
+
+  ]%}
+
+<div class="team ">
+  <div class="team__in js-slider-team">
+    {% for item in teams %}
+    <div class="team__item">
+      <div class="team__ava">
+        <img src="./img/team/team-{{ item.pic }}.jpg" alt="">
+      </div>
+      <div class="team__name">{{ item.name | safe }}</div>
+
+      <div class="team__desc"> {{ item.desc }}</div>
+
+      <ul class="soc soc_sm">
+        <li class="soc__item">
+          <a href="https://www.google.com.ua/" target="_blank" class="soc__link">
+            {{ mixins.icon('website')}}
+          </a>
+        </li>
+        <li class="soc__item">
+          <a href="https://www.facebook.com/" target="_blank" class="soc__link">
+            {{ mixins.icon('fb')}}
+          </a>
+        </li>
+        <li class="soc__item">
+          <a href="https://www.linkedin.com/feed/" target="_blank" class="soc__link">
+            {{ mixins.icon('in')}}
+          </a>
+        </li>
+      </ul>
+    </div>
+    {% endfor %}
+  </div>
+  <a href="#" class="team__arr team__arr-prev js-slider-arr-prev">{{ mixins.icon('arr-left')}}</a>
+  <a href="#" class="team__arr team__arr-next js-slider-arr-next">{{ mixins.icon('arr-right')}}</a>
+</div>
