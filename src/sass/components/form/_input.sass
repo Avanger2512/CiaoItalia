@@ -23,10 +23,7 @@
 
 .checkbox
   padding: 4px 0
-  &:hover
-    label
-      &:before
-        border-color: #fff
+
   input
     position: absolute
     z-index: -1
@@ -35,6 +32,10 @@
       border-color: #fff
     &:checked + label:after
       opacity: 1
+    &:hover
+      & + label
+        &:before
+          border-color: #fff
   label
     position: relative
     padding: 4px 0 0 45px
