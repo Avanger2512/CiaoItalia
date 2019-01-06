@@ -1,0 +1,45 @@
+.popup
+  position: fixed
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  z-index: 999
+  opacity: 0
+  visibility: hidden
+  background: rgba($black, .8)
+  white-space: nowrap
+  padding: 40px 0
+  transition: opacity .3s ease,visibility .3s ease
+  overflow: auto
+  text-align: center
+  font-size: 0
+  border: 1px solid #fff
+  +vertical
+  &.is-active
+    opacity: 1
+    visibility: visible
+  &__close
+    position: absolute
+    right: 40px
+    top: 40px
+    z-index: 3
+    +tr(opacity .3s)
+    &:hover
+      opacity: .8
+    .icon-close
+      width: 14px
+      height: 14px
+      fill: $orange
+  &__container
+    position: relative
+    display: inline-block
+    vertical-align: middle
+    width: 100%
+    max-width: 970px
+    white-space: normal
+    background: #fff
+    padding: 40px
+    font-size: 14px
+    text-align: left
+    +border

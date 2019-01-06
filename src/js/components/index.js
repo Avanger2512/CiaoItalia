@@ -2,6 +2,8 @@ import './burger'
 import './counter'
 import './slider'
 import './accordion'
+import './popup'
+import './goto'
 
 
 

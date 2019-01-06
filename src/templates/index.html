@@ -5,7 +5,7 @@ title: Index page
 
 {% block content %}
 
-	<section class="section section_vh" style="background-image: url('img/city.jpg')">
+	<section class="section section_vh" style="background-image: url('img/city.jpg')" >
 		<div class="l l_stretch l_content-right l_half">
 			<div class="l__col">
 				<div class="section__item section__item_image text-center" style="background-image: url('img/city-2.jpg')">
@@ -40,7 +40,7 @@ title: Index page
 						</div>
 					</div>
 
-					<button class="section__button" type="button">
+					<button class="section__button js-go-to" type="button" data-go="location">
 						{{mixins.icon('arr-down')}}
 					</button>
 				</div>
@@ -48,7 +48,7 @@ title: Index page
 		</div>
 	</section>
 
-	<section class="section">
+	<section class="section js-section" data-id="location">
 		<div class="l l_stretch l_content-right l_half">
 			<div class="l__col">
 				<div class="section__item section__item_mod text-center">
@@ -61,7 +61,7 @@ title: Index page
 							<li class="style-list__item">{{ item }}</li>
 							{% endfor%}
 						</ul>
-						<button class="btn btn_border-green">Дізнатися більше</button>
+						<button class="btn btn_border-green js-go-to" data-go="question">Дізнатися більше</button>
 					</div>
 					<div class="section__col section__col_orange">
 						<div class="places places_white">
@@ -73,7 +73,7 @@ title: Index page
 								</svg>
 								<span class="places__center">5</span>
 							</div>
-							<button class="btn btn_border-white">Дізнатися більше</button>
+							<button class="btn btn_border-white js-go-to" data-go="question">Дізнатися більше</button>
 						</div>
 
 					</div>
@@ -93,7 +93,7 @@ title: Index page
 
 	</section>
 
-	<section class="section section_gup">
+	<section class="section section_gup js-section" data-id="details">
 		<div class="text-center">
 			<h2>Що в програмі туру:</h2>
 
@@ -162,12 +162,12 @@ title: Index page
 						</div>
 					</div>
 
-					<button class="btn btn_full-green btn_width">Взяти участь</button>
+					<button class="btn btn_full-green btn_width js-go-to" data-go="question">Взяти участь</button>
 				</div>
 			</div>
 		</section>
 
-		<section class="section " style="background-image: url('img/boats.jpg')">
+		<section class="section js-section" style="background-image: url('img/boats.jpg')"  data-id="program">
 			<div class="l l_stretch l_content-left l_half">
 				<div class="l__col">
 					<div class="section__item section__item_image text-center" style="background-image: url('img/boats-2.jpg')">
@@ -192,7 +192,7 @@ title: Index page
 		</div>
 	</div>
 
-	<section class="section section_gup">
+	<section class="section section_gup js-section" data-id="cost">
 		<div class="text-center">
 			<div class="h2">Вартість туру</div>
 		</div>
@@ -211,7 +211,7 @@ title: Index page
 						{{mixins.icon('decor-line-bottom')}}
 					</div>
 
-					<button type="button" name="button" class="btn cost__btn">Взяти участь</button>
+					<button type="button" name="button" class="btn cost__btn js-go-to" data-go="question">Взяти участь</button>
 				</div>
 				<div class="cost__item">
 					<div class="cost__decor decor-block">
@@ -225,7 +225,7 @@ title: Index page
 						{{mixins.icon('decor-line-bottom')}}
 					</div>
 
-					<button type="button" name="button" class="btn cost__btn">Взяти участь</button>
+					<button type="button" name="button" class="btn cost__btn js-go-to" data-go="question">Взяти участь</button>
 				</div>
 				<div class="cost__item">
 					<div class="cost__decor decor-block">
@@ -239,7 +239,7 @@ title: Index page
 						{{mixins.icon('decor-line-bottom')}}
 					</div>
 
-					<button type="button" name="button" class="btn cost__btn">Взяти участь</button>
+					<button type="button" name="button" class="btn cost__btn js-go-to" data-go="question">Взяти участь</button>
 				</div>
 			</div>
 
@@ -278,7 +278,7 @@ title: Index page
 	</section>
 
 
-	<section class="section section_gup bg-gray">
+	<section class="section section_gup bg-gray js-section" data-id="about">
 		<div class="container text-center">
 			<div class="h3"> У нас збирається справді крута команда:</div>
 
@@ -289,7 +289,7 @@ title: Index page
 	</section>
 
 
-	<section class="section">
+	<section class="section js-section" data-id="question">
 		<div class="l l_not-half l_stretch ">
 			<div class="l__col section__relative">
 				<div class="section__width">

@@ -10,11 +10,10 @@
     <div class="container">
       <div class="l l_not-col l_center l_between">
 
-
         <a href="/" class="logo header__logo">
           Ciao&nbsp;<span>Italia</span>
         </a>
-        <!-- TODO: Need add GOTO  -->
+
         {% set menu = [
           {
             text: 'ДЕТАЛІ ТУРУ',
@@ -48,11 +47,48 @@
               <a href="#" class="nav__link js-go-to" data-go="{{item.anchor}}"> {{ item.text }}</a>
               {% endfor %}
             </nav>
-            <!-- TODO: Need add GOTO  -->
-            <a href="#" class="btn btn_full-orange js-go-to header__menu-hidden">Взяти участь</a>
+
+            <a href="#" class="btn btn_full-orange js-go-to header__menu-hidden" data-go="question">Взяти участь</a>
+
+            <div class="text-center">
+    					{{mixins.icon('decor-line-bottom')}}
+
+    					<ul class="soc soc_sm">
+    						<li class="soc__item">
+    							<a href="https://www.facebook.com/" target="_blank" class="soc__link">
+    								{{ mixins.icon('fb')}}
+    							</a>
+    						</li>
+    						<li class="soc__item">
+    							<a href="https://plus.google.com/" target="_blank" class="soc__link">
+    								{{ mixins.icon('google-plus')}}
+    							</a>
+    						</li>
+    						<li class="soc__item">
+    							<a href="https://www.instagram.com/" target="_blank" class="soc__link">
+    								{{ mixins.icon('insta')}}
+    							</a>
+    						</li>
+    						<li class="soc__item">
+    							<a href="https://www.pinterest.com/" target="_blank" class="soc__link">
+    								{{ mixins.icon('pinterest')}}
+    							</a>
+    						</li>
+    						<li class="soc__item">
+    							<a href="https://twitter.com/" target="_blank" class="soc__link">
+    								{{ mixins.icon('tw')}}
+    							</a>
+    						</li>
+    						<li class="soc__item">
+    							<a href="https://vk.com/" target="_blank" class="soc__link">
+    								{{ mixins.icon('vk')}}
+    							</a>
+    						</li>
+    					</ul>
+    				</div>
           </div>
-          <!-- TODO: Need add GOTO  -->
-          <a href="#" class="btn btn_full-orange btn_sm-mob js-go-to header__btn">Взяти участь</a>
+
+          <a href="#" class="btn btn_full-orange btn_sm-mob js-go-to header__btn" data-go="question">Взяти участь</a>
 
           <button type="button" name="button" class="burger js-burger">
             <span></span>
