@@ -1,15 +1,21 @@
 .style-list
   margin: 40px 0
   font-size: 0
+  +md
+    margin: 25px 0
   &__item
     position: relative
     display: inline-block
     vertical-align: middle
     font-size: 16px
+    line-height: 1.5
     +ubuntu-l
+    +md
+      font-size: 14px
+      line-height: 1.7
     &:not(:last-child)
       padding-right: 24px
-      margin-right: 20px
+      margin-right: 22px
       &:after
         content: ''
         position: absolute
@@ -24,7 +30,8 @@
       display: block
       font-size: 18px
       padding-left: 32px
-      margin-bottom: 15px
+      margin-bottom: 13px
+      line-height: 1.3
       &:after
         display: none
       &:before
@@ -38,19 +45,40 @@
         height: 9px
         border-radius: 50%
         background: $orange
+      +md
+        font-size: 14px
+        margin-bottom: 16px
 
 
 
 .image-list
   font-size: 0
-  max-width: 65%
+  max-width: 82%
   margin: 0 auto 80px
+  +r(1400)
+    max-width: 95%
+  +md
+    margin: 0 auto 10px
+    // max-width: 100%
+    text-align: center
   &__item
     display: inline-block
     vertical-align: top
     width: 20%
     text-align: center
-    padding: 0 2%
+    padding: 0 30px
+    +r(1400)
+      padding: 0 15px
+    +md
+      width: 33.3%
+      margin-bottom: 40px
+      padding: 0 13px
     > img
       max-width: 150px
-      margin-bottom: 40px
+      margin-bottom: 35px
+      +md
+        max-width: 80px
+        margin-bottom: 15px
+    // .desc-sm
+    //   max-width: 175px
+    //   margin: 0 auto

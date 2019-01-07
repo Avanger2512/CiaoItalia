@@ -1,17 +1,50 @@
 .cost
   $this: &
   font-size: 0
-  margin-bottom: 80px
+  margin: 0 -15px 80px
+  +clr
+  +md
+    margin: 50px 0
   &__item
     display: inline-block
     vertical-align: top
-    width: 33.33%
+    width: calc(33.3% - 30px)
+    margin: 0 15px
     text-align: center
     padding: 40px 0
+    +md
+      width: calc(100% - 390px)
+      margin: 0
+    &:nth-child(2)
+      .icon-decor-line-bottom
+        +md
+          display: none
+      .cost__decor-in
+        +md
+          position: relative
+          &:after
+            content: ''
+            position: absolute
+            bottom: 0
+            left: 50%
+            transform: translateX(-50%)
+            width: 96px
+            height: 1px
+            background: $orange
+    &:nth-child(3)
+      .icon-decor-line-top
+        +md
+          display: none
+
+
     &.is-active
       background: $orange
       color: #fff
       +border
+      +md
+        float: left
+        width: 380px
+        padding: 30px 0 40px
       #{$this}__btn
         pointer-events: auto
         background: #fff
@@ -20,33 +53,79 @@
           color: #fff
           background: $dark-orange
       #{$this}__decor
+        +md
+          margin: 10px 0 15px
         > .icon
           fill: #fff
+      #{$this}__decor-in
+        +md
+          padding: 20px 0 5px
+
+    &:not(.is-active)
+      +md
+        padding: 0 0 0 30px
+      #{$this}__btn
+        +md
+          display: none
+      #{$this}__decor
+        +md
+          margin: 20px 0 -20px 0
+      #{$this}__decor-in
+        +md
+          padding: 20px 0 2px
+
+
   &__btn
     background: $gray
     color: #fff
     pointer-events: none
+    padding-left: 35px
+    padding-right: 35px
+
   &__decor
     margin: 0 0 40px 0
+    &:not(.is-active)
+      +md
+
     > .icon
       max-width: 192px
       width: 100%
       height: 8px
       fill: $orange
+      +md
+        max-width: 96px
+        height: 4px
   &__decor-in
-    padding: 35px 0
+    padding: 35px 0 25px
+  .h3
+    line-height: 1.4
+    +md
+      font-size: 36px
+      line-height: 1.8
 
 
 .cost-additional
-  max-width: 1300px
-  width: 100%
   font-size: 0
-  margin: 0 auto 40px
+  margin: 75px auto 35px
+  +md
+    margin: 45px 0 0 0
   &__col
     display: inline-block
     vertical-align: top
     width: 50%
     padding-right: 8%
+    padding-left: 110px
+    +r(1400)
+      padding-right: 0%
+      padding-left: 85px
+    +md
+      width: 100%
+      display: block
+      padding-left: 0
+      margin-bottom: 40px
   &__title
     font-size: 30px
     +lora-i
+    +md
+      text-align: center
+      font-size: 24px

@@ -8,11 +8,17 @@
   +r(1400)
     max-width: 1280px
     padding: 0 45px
+
   +r(1200)
     padding: 0 30px
   +xs
     padding: 0 20px
-
+  &__md
+    +r(1400)
+      max-width: 80%
+      margin: 0 auto
+    +md
+      max-width: 100%
 
 
 .l
@@ -46,6 +52,15 @@
       &:last-child
         max-width: 55%
         flex-basis: 55%
+  &_col-md
+    +md
+      flex-direction: column
+    &.l_not-half
+      .l__col
+        +md
+          overflow: hidden
+          flex-basis: 100%
+          max-width: 100%
   &__col
     flex: 1 0 auto
 

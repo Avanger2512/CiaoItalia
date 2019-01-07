@@ -2,12 +2,18 @@
   position: relative
   height: 100%
   min-height: 100%
+  +r(1400)
+    min-height: 890px
+  +md
+    min-height: 720px
   .slick-dots
     position: absolute
     bottom: 80px
     left: 50%
     transform: translateX(-50%)
     margin: 0 -3px
+    +md
+      bottom: 50px
     li
       display: inline-block
       vertical-align: middle
@@ -23,7 +29,11 @@
       border-radius: 50%
       border: 2px solid #fff
   .slick-slide
+    div
+      height: 100%
     img
+      height: 100%
+      object-fit: cover
       width: 100%
 
 .slick-list,

@@ -1,20 +1,39 @@
+$aboutMargin: 31px
+
 .about-tour
   $this: &
   font-size: 0
-  margin: 110px 0 70px
+  margin: 120px 0 50px
+  +md
+    margin: 75px 0 30px
+  // overflow: hidden
   &__item
     position: relative
     display: inline-block
     vertical-align: top
-    width: 33.333%
-    padding-bottom: 180px
+    // width: calc(33.3% - 35px)
+    width: 33.3%
+    // margin: 0 17px
+    // padding-bottom: 180px
     &:nth-child(3n+1)
       #{$this}__content
+        margin: -40px 0px 0 165px
         z-index: 4
+        +r(1800)
+          margin: -30px 0 0 40px
+        +md
+          margin: -35px 0 0 15px
     &:nth-child(2n+2)
       margin-top: -40px
+      +md
+        margin-top: -20px
       #{$this}__content
         z-index: 3
+        margin: 5px 0 0 -20px
+        +r(1800)
+          margin: -79px 0 0 -60px
+        +md
+          margin: -35px 0 0 -15px
       #{$this}__img
         img
           object-fit: cover
@@ -22,48 +41,83 @@
           max-height: 360px
   &__img
     margin: 0 auto
+
+    // width: 631px
+
+    // height: 473px
     img
+      object-fit: contain
       width: 100%
+      +md
+        height: 252px
+        object-fit: cover
+        object-position: 30%
+      // width: 100%
   &__content
-    position: absolute
-    bottom: 0
+    // position: absolute
+    // bottom: 0
     text-align: center
     background: #fff
-    padding: 40px 0
-    max-width: 500px
+    padding: 40px 25px
+    max-width: 540px
+    width: 100%
     +border
+    +r(1400)
+      min-width: 415px
+    +lg
+      min-width: 300px
+      padding: 20px 10px
+    +md
+      min-width: 210px
     > svg
       fill: $orange
       width: 190px
       height: 8px
+      +md
+        width: 96px
   &__desc
     font-size: 20px
-    padding: 35px 55px
+    padding: 37px 50px
     +lora-i
+    +r(1400)
+      padding: 37px 60px
+    +md
+      font-size: 16px
+      padding: 12px 10px 20px
 
 
   &__item_men,
   &__item_pizza
     #{$this}__img
-      max-width: 630px
+      // max-width: 600px
 
   &__item_men
     #{$this}__content
-      right: -110px
+      // right: -110px
 
 
   &__item_pizza
     #{$this}__content
-      left: -70px
-      bottom: -20px
+      margin: -32px 0 0 -120px
+      +r(1800)
+        margin: -55px 0 0 -40px
+      +md
+        margin: -35px 0 0 -15px
+      // left: -70px
+      // bottom: -20px
 
   &__item_chief
-    padding-left: 70px
-    padding-right: 70px
+    padding-left: 62px
+    padding-right: 62px
+    +md
+      padding-left: 20px
+      padding-right: 20px
     #{$this}__img
       max-width: 500px
+      margin: 0 auto
+      text-align: center
     #{$this}__content
-      right: 40px
-      bottom: -50px
-  // &__item_chief
+  //     right: 40px
+  //     bottom: -50px
+  // // &__item_chief
   // &__item_pizza

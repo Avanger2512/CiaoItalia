@@ -10,9 +10,12 @@
   &:not(.team_md)
     +r(1400)
       width: calc(100% - 180px)
+  +md
+    margin: 45px auto 0
   &__in
     height: 100%
     margin: 0 -5px
+    z-index: 2
   &__item
     display: inline-block
     vertical-align: top
@@ -24,6 +27,7 @@
     background: #fff
     position: relative
     margin: 0 5px 10px
+    // min-width: 190px
     &:before
       content: ''
       position: absolute
@@ -35,6 +39,8 @@
       height: 10px
     &:last-child
       margin-right: 5px
+    +r(1400)
+      padding: 20px 16px
   &__ava
     max-width: 150px
     width: 100%
@@ -55,17 +61,17 @@
     +ubuntu-l
   &__arr
     position: absolute
-    top: 50%
-    transform: translateY(-50%)
-    margin-top: -4px
+    top: 258px
+    // margin-top: -4px
     width: 120px
     height: 80px
     background: $orange
+    z-index: 1
     +tr(background .2s)
     &:hover
       background: $dark-orange
     +r(1400)
-      width: 90px
+      width: 285px
     .icon
       position: absolute
       top: 50%
@@ -74,10 +80,16 @@
       font-size: 10px
   &__arr-prev
     right: calc(100% - 5px)
+    +r(1400)
+      right: auto
+      left: -85px
     .icon
       left: 30px
   &__arr-next
     left: calc(100% + 5px)
+    +r(1400)
+      left: auto
+      right: -95px
     .icon
       right: 30px
   &__left

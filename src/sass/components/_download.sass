@@ -1,12 +1,28 @@
 .download
   display: block
-  max-width: 410px
+  max-width: 380px
   margin: 0 auto 80px
+  +md
+    max-width: 280px
+    margin-bottom: 50px
   &__in
-    margin-bottom: 40px
+    margin-bottom: 35px
     +clr
+    +md
+      margin-bottom: 20px
   &__pic
     float: left
     margin-right: 40px
+    +md
+      margin-right: 30px
+    img
+      +md
+        width: 51px
   &__text
     overflow: hidden
+    line-height: 1.2
+    +md
+      font-size: 16px
+
+  .btn
+    font-size: 22px

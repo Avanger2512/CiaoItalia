@@ -1,14 +1,12 @@
 .places
   $this: &
-  // &:hover
-  //   #{$this}__in
-  //     animation: border .4s ease 1 forwards
   &__in
     position: relative
     border-radius: 50%
     margin: 0 auto 40px
     box-sizing: border-box
-    // border: 10px solid #fff
+    +md
+      margin-bottom: 30px
     &:before
       content: ''
       position: absolute
@@ -33,13 +31,23 @@
     font-size: 20px
     margin-bottom: 10px
     +lora-i
+    +md
+      font-size: 14px
+  &__center
+    .h4
+      +md
+        font-size: 18px
+        margin-top: -10px
 
   &_white
     color: #fff
     #{$this}__title
       font-size: 20px
       margin-bottom: 20px
+      letter-spacing: 1.2px
       +ubuntu-l
+      +md
+        font-size: 16px
     #{$this}__in
       width: 140px
       height: 140px
@@ -61,29 +69,46 @@
       font-size: 20px
       margin-bottom: 20px
       +ubuntu-l
+
     #{$this}__in
       width: 380px
       height: 380px
+      +md
+        width: 220px
+        height: 220px
       &:before
         border: 10px solid rgba($green, .25)
       span
         font-size: 72px
         +lora-b
+        +md
+          font-size: 48px
+          line-height: 1
     #{$this}__circle
       width: 380px
       height: 380px
+      +md
+        width: 220px
+        height: 220px
       circle
         stroke-dasharray: 790px
         stroke-dashoffset: -440px
         stroke: white
         stroke-width: 4px
         animation: countdown 5s linear infinite forwards
+        +md
+          stroke-width: 7px
+          r: 73.5
     .icon-decor-line-top
       fill: $green
       max-width: 192px
       width: 100%
+      +md
+        max-width: 96px
 
-
+  & + .btn
+    +md
+      font-size: 22px
 @keyframes countdown
   from
     stroke-dashoffset: -440px

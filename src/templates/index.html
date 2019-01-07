@@ -14,11 +14,11 @@ title: Index page
 
 
 					<div class="decor-block">
-						{{mixins.icon('decor-line-top')}}
+						{{mixins.icon('decor-line-bottom')}}
 
 						<div class="h5 decor-block__text">5-12 квітня 2019</div>
 
-						{{mixins.icon('decor-line-bottom')}}
+						{{mixins.icon('decor-line-top')}}
 					</div>
 
 					<div class="counter">
@@ -30,7 +30,7 @@ title: Index page
 							</div>
 							<div class="counter__item">
 								<div class="counter__meta js-counter-hours"></div>
-								<div class="conter__desc">годин</div>
+								<div class="counter__desc">годин</div>
 							</div>
 							<div class="counter__item">
 								<div class="counter__meta js-counter-minutes"></div>
@@ -170,7 +170,7 @@ title: Index page
 		<section class="section js-section" style="background-image: url('img/boats.jpg')"  data-id="program">
 			<div class="l l_stretch l_content-left l_half">
 				<div class="l__col">
-					<div class="section__item section__item_image text-center" style="background-image: url('img/boats-2.jpg')">
+					<div class="section__item section__item_image section__item_image-sm text-center" style="background-image: url('img/boats-2.jpg')">
 						<div class="section__width">
 							<div class="h2 section__width_title">Програма туру</div>
 
@@ -280,17 +280,16 @@ title: Index page
 
 	<section class="section section_gup bg-gray js-section" data-id="about">
 		<div class="container text-center">
-			<div class="h3"> У нас збирається справді крута команда:</div>
+			<div class="h3 container__md"> У нас збирається справді крута команда:</div>
 
-			<div class="container">
-				{% include './partials/_team.html' %}
-			</div>
+			{% include './partials/_team.html' %}
+
 		</div>
 	</section>
 
 
 	<section class="section js-section" data-id="question">
-		<div class="l l_not-half l_stretch ">
+		<div class="l l_not-half l_stretch l_col-md">
 			<div class="l__col section__relative">
 				<div class="section__width">
 					<div class="container">

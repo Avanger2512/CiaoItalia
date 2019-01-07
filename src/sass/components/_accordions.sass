@@ -2,6 +2,8 @@
   position: relative
   background: #fff
   margin: -80px 0 80px
+  +md
+    margin: -50px 0 50px
   &:before
     content: ''
     position: absolute
@@ -14,6 +16,8 @@
   &__item
     position: relative
     padding: 0 40px
+    +md
+      padding: 0 30px
     &:not(:last-child)
       border-bottom: 4px solid rgba(#000, .05)
     &:after
@@ -32,13 +36,23 @@
     justify-content: space-between
     width: 100%
     padding: 37px 0px
-
+    +md
+      padding: 15px 0 18px
     &.is-active
       .icon-in-circle
         +rotate(180)
       .icon-in-circle__in
         span:last-child
           opacity: 0
+  &__col
+    +md
+      text-align: left
+    &:first-child
+      +md
+        display: none
+    .h5
+      +md
+        line-height: 1.5
   &__content
     display: none
     border-top: 2px solid $green
@@ -49,12 +63,15 @@
     +ubuntu-l
     > span
       padding: 0 5px
+
   &__desc
     font-size: 16px
     +ubuntu-l
+    +sm
+      font-size: 12px
   &__list
     li:not(:last-child)
-      margin-bottom: 15px
+      margin-bottom: 13px
   &__line
     display: flex
     flex-flow: row nowrap
@@ -65,22 +82,65 @@
       border-bottom: 2px solid $light-gray
     &:last-child
       padding-bottom: 80px
+      +md
+        padding-bottom: 50px
+    +md
+      padding: 25px 0 30px
+      flex-direction: column
   &__time
     font-size: 18px
     flex-basis: 160px
     max-width: 160px
     margin-top: 3px
     +lora
+    +md
+      flex-basis: 100%
+      max-width: 100%
+      margin: 0 0 18px
+      font-size: 14px
   &__about
     flex: 1 0
     padding-right: 30px
+    +md
+      padding-right: 0
     .desc
       margin-bottom: 30px
+      &:only-child
+        margin-bottom: 0
+      +md
+        margin-bottom: 20px
+    .title-sm
+      +rmin(980)
+        display: none
+    & + .accordion__additionally
+      // margin-top: 20px
+
   &__additionally
     flex-basis: 320px
     max-width: 320px
+    +r(1400)
+      flex-basis: 230px
+      max-width: 230px
+    +md
+      flex-basis: 100%
+      max-width: 100%
     .title-sm
       max-width: 280px
+      +md
+        max-width: 100%
+  &__line-diff
+    .accordion__time
+      +md
+        display: none
+    .accordion__about
+      .title-sm
+        +md
+          margin-bottom: 19px
+          font-size: 14px
+    .accordion__additionally
+      .title-sm
+        +md
+          display: none
 
 .icon-in-circle
   position: relative
@@ -96,6 +156,10 @@
     border-color: $orange
     span
       background: $orange
+  +md
+    width: 28px
+    height: 28px
+    margin-top: 5px
   &__in
     +vcenter
     > span
@@ -105,11 +169,18 @@
       &:first-child
         width: 18px
         height: 2px
+        +md
+          width: 10px
+          // margin-left: 1px
       &:last-child
         width: 2px
         height: 18px
         margin-top: -9px
         +rotate(180)
+        +md
+          height: 10px
+          margin-top: -5px
+          margin-left: -1px
 
 
 .link
@@ -121,15 +192,22 @@
     opacity: .8
     .icon
       transform: translateX(5px)
+  +md
+    font-size: 14px
   .icon
     font-size: 10px
     margin-left: 10px
     fill: $green
     +tr(transform .15s ease-in)
+    +md
+      margin-left: 5px
 
 .member
   max-width: 180px
   width: 100%
+  +clr
+  +md
+    max-width: 100%
   &__pic
     display: inline-block
     width: 72px
@@ -137,11 +215,23 @@
     border-radius: 50%
     overflow: hidden
     margin-bottom: 15px
+    +md
+      display: block
+      margin-bottom: 0
+      float: left
+      margin-right: 30px
   &__name
     display: inline-block
     font-size: 16px
     width: 100%
     +ubuntu-b
+    +md
+      width: calc(100% - 87px - 15px)
+      margin-top: 20px
+      font-size: 14px
+      &:after
+        content: '\A'
+        white-space: pre
   &__desc
     font-size: 14px
     color: $black
