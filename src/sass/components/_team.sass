@@ -110,6 +110,13 @@
     float: left
     width: 150px
     margin-right: 80px
+    +md
+      margin-right: 40px
+    +sm
+      float: none
+      width: 100%
+      margin-right: 0
+      margin-bottom: 40px
   &__right
     overflow: hidden
     text-align: left
@@ -120,10 +127,14 @@
   &_md
     width: 100%
     margin: 0
+    +md
+      margin: 0
     #{$this}__in
       margin: 0
     #{$this}__ava
       margin-bottom: 0
+      +sm
+        max-width: 75px
     #{$this}__name
       font-size: 36px
       margin: 0 0 40px 0
@@ -131,10 +142,15 @@
       border: none
       text-align: left
       +lora-bi
+      +md
+        margin: 0 0 20px 0
+        font-size: 26px
     #{$this}__desc
       font-size: 18px
       margin: 0
       +ubuntu-l
+      +md
+        font-size: 14px
       > p
         &:not(:last-child)
           margin-bottom: 20px
@@ -146,6 +162,9 @@
       +clr
       &:before
         display: none
+    #{$this}__wrap
+      padding-bottom: 10px
+      margin-bottom: 20px
 
 
   .slick-slide

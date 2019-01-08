@@ -9,7 +9,7 @@
   visibility: hidden
   background: rgba($black, .8)
   white-space: nowrap
-  padding: 40px 0
+  padding: 40px 20px
   transition: opacity .3s ease,visibility .3s ease
   overflow: auto
   text-align: center
@@ -27,6 +27,9 @@
     +tr(opacity .3s)
     &:hover
       opacity: .8
+    +sm
+      right: 20px
+      top: 20px
     .icon-close
       width: 14px
       height: 14px
@@ -43,3 +46,16 @@
     font-size: 14px
     text-align: left
     +border
+    +sm
+      padding: 20px
+  &__container_sm
+    max-width: 570px
+  &__wrap
+    padding: 40px 0 80px
+    +md
+      padding: 40px 0
+  &__img
+    margin-bottom: 30px
+  &__title
+    font-size: 24px
+    +lora-bi

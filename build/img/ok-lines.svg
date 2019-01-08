@@ -1,0 +1,11 @@
+<svg width="240" height="40" viewBox="0 0 240 40" xmlns="http://www.w3.org/2000/svg">
+    <title>
+        pop_up_2
+    </title>
+    <g fill="#6ECDBE" fill-rule="nonzero">
+        <path d="M120 0c-11 0-20 9-20 20s9 20 20 20 20-9 20-20-9-20-20-20zm0 38c-9.9 0-18-8.1-18-18s8.1-18 18-18 18 8.1 18 18-8.1 18-18 18z"/>
+        <path d="M0 19h90v2H0z"/>
+        <path d="M150 19h90v2h-90z"/>
+        <path d="M128.2 13.5l-11.3 11.3-4.1-4.1-1.4 1.4 4.1 4.1 1.4 1.4 1.4-1.4 11.3-11.3z"/>
+    </g>
+</svg>

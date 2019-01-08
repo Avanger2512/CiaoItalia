@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="240px" height="40px" viewBox="0 0 240 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>pop_up_2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pop_up_2" fill="#6ECDBE" fill-rule="nonzero">
+            <path d="M120,0 C109,0 100,9 100,20 C100,31 109,40 120,40 C131,40 140,31 140,20 C140,9 131,0 120,0 Z M120,38 C110.1,38 102,29.9 102,20 C102,10.1 110.1,2 120,2 C129.9,2 138,10.1 138,20 C138,29.9 129.9,38 120,38 Z" id="Shape"></path>
+            <rect id="Rectangle-path" x="0" y="19" width="90" height="2"></rect>
+            <rect id="Rectangle-path" x="150" y="19" width="90" height="2"></rect>
+            <polygon id="Shape" points="128.2 13.5 116.9 24.8 112.8 20.7 111.4 22.1 115.5 26.2 116.9 27.6 118.3 26.2 129.6 14.9"></polygon>
+        </g>
+    </g>
+</svg>
