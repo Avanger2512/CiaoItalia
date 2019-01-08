@@ -26,10 +26,21 @@ function isScrolledIntoView(elem){
 function decreaseValue(el){
   let num = $(el).find('.js-places-num');
   let numEnd = num.data('end');
-  let numText = num.text();
+  let numText = num.text()-1;
 
-  setInterval(() => {
-    (+numText >= numEnd) ? num.text(numText--) : false
-  }, 70);
-
+  num.prop('Counter', +numText).animate({
+    Counter: $(this).text()
+  }, {
+    duration: 2200,
+    easing: 'swing',
+    step: function (now) {
+      if (now >= +numEnd-1) {
+        $(this).text(Math.ceil(now));
+        return false;
+      }
+    },
+    complete: function() {
+      $(this).text(numEnd);
+    }
+  });
 }
