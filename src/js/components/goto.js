@@ -12,8 +12,10 @@ SCROLL_TO_BTN.on("click", function() {
     closeMenu();
   }
 
-  HTMLBODY.animate({
+  if (target.length !== 0) {
+    HTMLBODY.animate({
       scrollTop: target.offset().top
     },1000);
+  }
   return false;
 });

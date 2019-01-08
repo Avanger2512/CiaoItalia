@@ -72,7 +72,7 @@ const POPUP = (function() {
   }
 
   let popup = new Popup();
-
+  
   return popup;
 
 })();

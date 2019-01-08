@@ -3,14 +3,9 @@ $(document).ready(function(){
       accordionBtn = accordion.find('.js-accordion-btn');
 
   accordionBtn.on("click", function() {
-    // $('.js-accordion-btn').removeClass("is-active");
-    // $(".js-accordion-content").slideUp(300);
-
     $(this)
       .toggleClass("is-active")
       .next()
       .slideToggle();
-
-
   });
 });

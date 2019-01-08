@@ -1,5 +1,6 @@
 .places
   $this: &
+  +gpu
   &__in
     position: relative
     border-radius: 50%
@@ -41,6 +42,9 @@
 
   &_white
     color: #fff
+    &.is-visible
+      #{$this}__circle circle
+        animation: countdown 1.65s ease-in-out 1 forwards
     #{$this}__title
       font-size: 20px
       margin-bottom: 20px
@@ -58,13 +62,16 @@
       height: 140px
       circle
         stroke-dasharray: 790px
-        stroke-dashoffset: -440px
+        stroke-dashoffset: -452px
         stroke-width: 10px
         stroke: white
-        animation: countdown 5s linear infinite forwards
+
 
   &_green
     color: $black
+    &.is-visible
+      #{$this}__circle circle
+        animation: countdown-big 1.65s ease-in-out	1 forwards
     #{$this}__title
       font-size: 20px
       margin-bottom: 20px
@@ -92,10 +99,9 @@
         height: 220px
       circle
         stroke-dasharray: 790px
-        stroke-dashoffset: -440px
+        stroke-dashoffset: -475px
         stroke: white
         stroke-width: 4px
-        animation: countdown 5s linear infinite forwards
         +md
           stroke-width: 7px
           r: 73.5
@@ -109,8 +115,16 @@
   & + .btn
     +md
       font-size: 22px
+
+
 @keyframes countdown
   from
-    stroke-dashoffset: -440px
+    stroke-dashoffset: -452px
   to
-    stroke-dashoffset: 0px
+    stroke-dashoffset: -65px
+
+@keyframes countdown-big
+  from
+    stroke-dashoffset: -475px
+  to
+    stroke-dashoffset: -55px

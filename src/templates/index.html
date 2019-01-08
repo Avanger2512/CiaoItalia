@@ -54,7 +54,7 @@ title: Index page
 				<div class="section__item section__item_mod text-center">
 					<div class="section__col">
 						<div class="section__caption section__caption_border">6 насичених днів:</div>
-						<div class="h4">Подорож регіоном Венетто від моря до гір!</div>
+						<h4 class="">Подорож регіоном Венетто від моря до гір!</h4>
 						{% set list = ['Венеція', 'Бурано', 'Чивідале-дель-Фріул', 'Сауріс', 'Трієст']%}
 						<ul class="style-list">
 							{% for item in list %}
@@ -64,14 +64,14 @@ title: Index page
 						<button class="btn btn_border-green js-go-to" data-go="question">Дізнатися більше</button>
 					</div>
 					<div class="section__col section__col_orange">
-						<div class="places places_white">
+						<div class="places places_white js-places">
 
 							<div class="places__title">Залишилось місць:</div>
 							<div class="places__in h2">
 								<svg viewBox="0 -12  130 155" class="places__circle">
 								   <circle cx="65" cy="65" r="72" style="stroke:#fff; fill:none"/>
 								</svg>
-								<span class="places__center">5</span>
+								<span class="places__center js-places-num" data-end="5">25</span>
 							</div>
 							<button class="btn btn_border-white js-go-to" data-go="question">Дізнатися більше</button>
 						</div>
@@ -143,11 +143,11 @@ title: Index page
 		<section class="section section_image" style="background-image: url('./img/kitchen.jpg')">
 			<div class="container">
 				<div class="section__meta meta">
-					<div class="h3">Приєднуйтесь  до нас!</div>
+					<h3 class="">Приєднуйтесь  до нас!</h3>
 					<div class="section__decor section__decor_green meta__decor"></div>
 					<div class="title meta__title">З цієї подорожі ви привезете те тільки красиві фото, але й унікальні знання і досвід!</div>
 
-					<div class="places places_green">
+					<div class="places places_green js-places">
 
 						<div class="places__in h2">
 							<svg viewBox="0 -12  130 155" class="places__circle">
@@ -155,7 +155,7 @@ title: Index page
 							</svg>
 							<div class="places__center">
 								<div class="places__title-in">Залишилось вільних місць:</div>
-								<span>5</span>
+								<span class="js-places-num" data-end="5">25</span>
 								{{mixins.icon('decor-line-top')}}
 								<div class="h4">Поспішай!</div>
 							</div>
@@ -172,7 +172,7 @@ title: Index page
 				<div class="l__col">
 					<div class="section__item section__item_image section__item_image-sm text-center" style="background-image: url('img/boats-2.jpg')">
 						<div class="section__width">
-							<div class="h2 section__width_title">Програма туру</div>
+							<h2 class=" section__width_title">Програма туру</h2>
 
 							<div class="decor-block">
 								{{mixins.icon('decor-line-top')}}
@@ -194,7 +194,7 @@ title: Index page
 
 	<section class="section section_gup js-section" data-id="cost">
 		<div class="text-center">
-			<div class="h2">Вартість туру</div>
+			<h2 class="">Вартість туру</h2>
 		</div>
 
 		<div class="container">
@@ -280,7 +280,7 @@ title: Index page
 
 	<section class="section section_gup bg-gray js-section" data-id="about">
 		<div class="container text-center">
-			<div class="h3 container__md"> У нас збирається справді крута команда:</div>
+			<h3 class=" container__md"> У нас збирається справді крута команда:</h3>
 
 			{% include './partials/_team.html' %}
 
@@ -294,7 +294,7 @@ title: Index page
 				<div class="section__width">
 					<div class="container">
 						<div class="form-details">
-							<div class="form-details__title h3">Станьте учасником бізнес-туру</div>
+							<h3 class="form-details__title ">Станьте учасником бізнес-туру</h3>
 							<p class="form-details__text">Зателефонуйте нам, або заповніть форму і ми зв’яжимося з вами для уточнення всіх нюансів.</p>
 
 							<a href="tel:+380972222222" class="form-details__phone">+38 097 222 22 22</a>
@@ -308,27 +308,28 @@ title: Index page
 				<div class="section__line section__line_sm"></div>
 			</div>
 			<div class="l__col bg-black">
-				<form action="/" class="form">
+				<form action="/" class="form js-form" id="callback" method="POST">
 					<div class="form__title desc">Залиште свої контакти щоб дізнатися деталі</div>
 					<div class="form__line">
 						<div class="input">
-							<input type="text" name="name" placeholder="Ваше ім’я:">
+							<input type="text" name="name" minlength="2" placeholder="Ваше ім’я:" required>
 						</div>
 					</div>
 					<div class="form__line">
 						<div class="input">
-							<input type="tel" name="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="ТЕЛЕФОН:">
+							<input type="tel" name="tel" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" placeholder="ТЕЛЕФОН:" required>
 						</div>
 					</div>
 					<div class="form__line">
 						<div class="checkbox">
 							<input type="checkbox" id="privacy"
        				required >
-							<label for="privacy">Я приймаю <a href="/privacy.html" target="_blank">політику конфеденційності</a></label>
+							<label for="privacy">Я приймаю <a href="./privacy.html" target="_blank">політику конфеденційності</a></label>
 						</div>
 					</div>
 					<div class="form__btn">
-						<button type="submit" name="button" class="btn btn_width btn_full-orange">Надіслати</button>
+						<input type="submit" value="Надіслати" class="btn btn_width btn_full-orange">
+						<!-- <button type="submit" name="button" class="btn btn_width btn_full-orange">Надіслати</button> -->
 					</div>
 				</form>
 			</div>
@@ -340,7 +341,7 @@ title: Index page
 			<div class="organization">
 				<div class="text-center">
 					{{mixins.icon('decor-line-top')}}
-					<div class="organization__title h2">Про організаторів</div>
+					<h2 class="organization__title ">Про організаторів</h2>
 				</div>
 				<div class="organization__text">
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
