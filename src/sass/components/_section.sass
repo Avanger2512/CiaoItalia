@@ -2,10 +2,14 @@
   position: relative
   background-size: cover
   background-position: 50% 50%
+  background-repeat: no-repeat
 
   &__item
     position: relative
     height: 100%
+    .slider
+      +xs
+        display: none
 
   &__item_image
     background-size: cover
@@ -21,6 +25,9 @@
       display: flex
       flex-flow: column
       justify-content: center
+    +xs
+      min-height: 345px
+      margin-top: 192px
     .desc-sm
       max-width: 530px
       margin: 0 auto
@@ -33,6 +40,8 @@
     +md
       min-height: 290px
       padding: 40px 20px 100px
+    +xs
+      margin-top: 0
   &__col
     height: 50%
     display: flex
@@ -46,6 +55,8 @@
       padding: 0 85px
     +sm
       padding: 0 10px
+    +xs
+      padding: 50px 10px
 
   &__col_orange
     background: $orange
@@ -135,6 +146,8 @@
       width: 110px
       right: 0
       bottom: 240px
+    +xs
+      bottom: 255px
   &__line_md
     width: 315px
     left: 0
@@ -142,15 +155,23 @@
     +md
       width: 110px
       bottom: 165px
+  &_hidden-img-xs
+    +xs
+      background-image: none
 
   &_vh
     height: calc(100vh - 141px)
     +r(1400)
-      min-height: 742px
+      min-height: 750px
     +lg
       min-height: 520px
     +md
       height: calc(100vh - 107px)
+    +xs
+      min-height: auto
+      height: auto
+      background-size: 300%
+      background-position: 25% -90px
 
   &_gup
     padding: 80px 0 30px
@@ -162,6 +183,11 @@
     +md
       max-height: 580px
 
+.bg-gray
+  .section.section_image
+    +xs
+      max-height: 200px
+      margin-bottom: 630px
 
 .decor-block
   margin: 72px 35px 35px
@@ -182,7 +208,12 @@
   max-width: 600px
   margin: 0 auto
   +md
+    max-width: 450px
+    width: 100%
+  +sm
     max-width: 300px
+  +xs
+    display: none
   &__title
     font-size: 18px
     +ubuntu
@@ -239,6 +270,8 @@
     max-width: 280px
     padding: 43px 30px
     margin-top: 30px
+  +xs
+    margin-top: 170px
   &__title
     margin-bottom: 40px
     +md

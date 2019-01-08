@@ -11,10 +11,11 @@ $aboutMargin: 31px
     position: relative
     display: inline-block
     vertical-align: top
-    // width: calc(33.3% - 35px)
     width: 33.3%
-    // margin: 0 17px
-    // padding-bottom: 180px
+    +xs
+      width: 100%
+      &:not(:last-child)
+        margin-bottom: 40px
     &:nth-child(3n+1)
       #{$this}__content
         margin: -40px 0px 0 165px
@@ -41,10 +42,9 @@ $aboutMargin: 31px
           max-height: 360px
   &__img
     margin: 0 auto
-
-    // width: 631px
-
-    // height: 473px
+    +xs
+      display: inline-block
+      width: 270px
     img
       object-fit: contain
       width: 100%
@@ -69,6 +69,9 @@ $aboutMargin: 31px
       padding: 20px 10px
     +md
       min-width: 210px
+    +xs
+      min-width: auto
+      max-width: 270px
     > svg
       fill: $orange
       width: 190px
@@ -103,6 +106,8 @@ $aboutMargin: 31px
         margin: -55px 0 0 -40px
       +md
         margin: -35px 0 0 -15px
+      +xs
+        margin: -35px 0 0 30px
       // left: -70px
       // bottom: -20px
 
@@ -112,10 +117,14 @@ $aboutMargin: 31px
     +md
       padding-left: 20px
       padding-right: 20px
+    +xs
+      padding: 0
+      text-align: right
     #{$this}__img
       max-width: 500px
       margin: 0 auto
       text-align: center
+
     #{$this}__content
   //     right: 40px
   //     bottom: -50px

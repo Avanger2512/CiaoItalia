@@ -4,7 +4,7 @@
     border: 2px solid rgba(#fff, .35)
     background: transparent
     font-size: 12px
-    padding: 20px
+    padding: 19px 20px
     color: #fff
     text-transform: uppercase
     +tr(border-color .2s ease-in-out)
@@ -44,6 +44,9 @@
     font-size: 14px
     color: #fff
     +ubuntu-l
+    +xs
+      display: block
+      padding: 0px 0 0 40px
     &:before
       content: ''
       position: absolute
@@ -54,6 +57,8 @@
       border: 2px solid rgba(#fff, .35)
       background: trasparent
       transition: border-color .2s ease-in-out, opacity .2s ease-in-out
+      +xs
+        top: 4px
     &:after
       content: ''
       position: absolute
@@ -64,8 +69,12 @@
       height: 8px
       background: #fff
       +tr(border-color .2s ease-in-out)
+      +xs
+        top: 12px  
     > a
       color: $green
       text-decoration: underline
       &:hover
         text-decoration: none
+      +xs
+        display: block

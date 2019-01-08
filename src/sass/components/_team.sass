@@ -10,8 +10,12 @@
   &:not(.team_md)
     +r(1400)
       width: calc(100% - 180px)
+    +xs
+      width: calc(100% - 100px)
   +md
     margin: 45px auto 0
+  // +xs
+  //   margin: 45px -20px 0
   &__in
     height: 100%
     margin: 0 -5px
@@ -72,6 +76,8 @@
       background: $dark-orange
     +r(1400)
       width: 285px
+    +xs
+      width: 100px
     .icon
       position: absolute
       top: 50%
@@ -83,15 +89,23 @@
     +r(1400)
       right: auto
       left: -85px
+    +xs
+      left: -70px
     .icon
       left: 30px
+      +xs
+        left: 20px
   &__arr-next
     left: calc(100% + 5px)
     +r(1400)
       left: auto
       right: -95px
+    +xs
+      right: -70px
     .icon
       right: 30px
+      +xs
+        right: 20px
   &__left
     float: left
     width: 150px

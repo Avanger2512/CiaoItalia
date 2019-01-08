@@ -30,6 +30,13 @@ let optionsTeam = {
         slidesToShow: 2,
         slidesToScroll: 1
       }
+    },
+    {
+      breakpoint: 599,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
     }
   ]
 }

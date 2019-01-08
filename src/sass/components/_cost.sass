@@ -5,6 +5,11 @@
   +clr
   +md
     margin: 50px 0
+  +xs
+    margin: 50px 0 80px
+  & + .section__decor
+    +xs
+      display: none
   &__item
     display: inline-block
     vertical-align: top
@@ -15,6 +20,8 @@
     +md
       width: calc(100% - 390px)
       margin: 0
+    +xs
+      width: 100%
     &:nth-child(2)
       .icon-decor-line-bottom
         +md
@@ -43,8 +50,11 @@
       +border
       +md
         float: left
-        width: 380px
+        max-width: 380px
+        width: 100%
         padding: 30px 0 40px
+      +xs
+        margin-bottom: 40px
       #{$this}__btn
         pointer-events: auto
         background: #fff
@@ -64,6 +74,8 @@
     &:not(.is-active)
       +md
         padding: 0 0 0 30px
+      +xs
+        padding: 0
       #{$this}__btn
         +md
           display: none
