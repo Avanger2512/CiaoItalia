@@ -35,7 +35,9 @@ let optionsTeam = {
       breakpoint: 599,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        centerMode: true,
+        variableWidth: true
       }
     }
   ]

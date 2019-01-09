@@ -4,16 +4,27 @@ export const body = $('body');
 
 
 burger.on('click', function() {
-  $(this).toggleClass('is-active');
-  header.toggleClass('is-menu-open');
-  body.toggleClass('is-hidden');
+  if (!(header.hasClass('is-menu-open'))) {
+    body.attr( 'data-pos', $(window).scrollTop());
+    
+    header.addClass('is-menu-open');
+    $(this).addClass('is-active');
+    body.addClass('is-hidden');
+
+  } else {
+    closeMenu();
+  }
+
 });
 
 
 function closeMenu() {
+  body.removeClass('is-hidden');
   burger.removeClass('is-active');
   header.removeClass('is-menu-open');
-  body.removeClass('is-hidden');
+  $( window ).scrollTop( body.attr( 'data-pos' ));
 }
+
+
 
 export default closeMenu;

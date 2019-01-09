@@ -52,6 +52,8 @@
         display: none
     &:nth-child(2)
       margin-left: -100px
+      +md
+        margin-left: 0
     .h5
       +md
         line-height: 1.5
@@ -215,6 +217,7 @@
     background: rgba($black, .1)
   +md
     max-width: 100%
+    margin: 15px 0 0 -10px
 
   &__pic
     display: inline-block

@@ -31,6 +31,7 @@
     background: #fff
     position: relative
     margin: 0 5px 10px
+    max-width: 195px
     // min-width: 190px
     &:before
       content: ''
@@ -43,6 +44,8 @@
       height: 10px
     &:last-child
       margin-right: 5px
+      +xs
+        margin-right: 0
     +r(1400)
       padding: 20px 16px
   &__ava
@@ -79,7 +82,7 @@
     +r(1400)
       width: 285px
     +xs
-      width: 100px
+      width: 65px
     .icon
       position: absolute
       top: 50%
@@ -172,3 +175,5 @@
 
   .slick-slide
     margin: 0 5px
+    // +xs
+    //   margin: 0

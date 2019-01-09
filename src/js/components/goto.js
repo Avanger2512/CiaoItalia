@@ -15,7 +15,7 @@ SCROLL_TO_BTN.on("click", function() {
   if (target.length !== 0) {
     HTMLBODY.animate({
       scrollTop: target.offset().top - header.find('.header__content').height() + 1
-    },1000);
+    }, 1000);
   }
   return false;
 });

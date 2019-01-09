@@ -18,20 +18,19 @@
     min-height: 750px
     +r(1400)
       padding: 63px 5%
-    +lg
+    +md
       padding: 35px 20px
       min-height: 520px
-    +md
       display: flex
       flex-flow: column
       justify-content: center
     +xs
-      min-height: 345px
+      min-height: 355px
       margin-top: 192px
     .desc-sm
       max-width: 530px
       margin: 0 auto
-      +lg
+      +md
         max-width: 270px
   &__item_image-sm
     min-height: 540px
@@ -42,6 +41,7 @@
       padding: 40px 20px 100px
     +xs
       margin-top: 0
+      min-height: 290px
   &__col
     height: 50%
     display: flex
@@ -119,8 +119,10 @@
   &__decor_green
     background-color: $green
   &__width
-    max-width: 400px
+    max-width: 395px
     margin: 0 170px 0 auto
+    +r(1400)
+      margin: 0 auto
     +md
       max-width: 525px
     .decor-block
@@ -142,18 +144,29 @@
     width: 230px
     bottom: 340px
     right: -100px
+    +r(1400)
+      width: 170px
+      bottom: 359px
+      right: -66px
     +md
       width: 110px
       right: 0
       bottom: 240px
     +xs
+      width: 100px
       bottom: 255px
   &__line_md
     width: 330px
     left: 0
     bottom: 218px
+    +r(1400)
+      width: 145px
+      bottom: 213px
     +md
       width: 110px
+      bottom: 165px
+    +xs
+      width: 100px
       bottom: 165px
   &_hidden-img-xs
     +xs
@@ -167,6 +180,7 @@
     +lg
       min-height: 800px
     +md
+      min-height: 200px
       height: calc(100vh - 107px)
     +xs
       min-height: auto
@@ -176,6 +190,8 @@
 
   &_gup
     padding: 70px 0 30px
+    // +lg
+    //   padding: 80px 0 30px
     +md
       padding: 43px 0 30px
 
@@ -188,12 +204,14 @@
   .section.section_image
     +xs
       max-height: 200px
-      margin-bottom: 630px
+      margin-bottom: 615px
 
 .decor-block
   margin: 72px 35px 35px
   +r(1200)
     margin: 30px 0
+  +xs
+    margin: 15px 0
   &__text
     padding: 25px 0 35px
     +r(1200)
@@ -285,3 +303,5 @@
       margin: 30px 0
   .places__in
     margin-bottom: 60px
+    +md
+      margin-bottom: 25px
