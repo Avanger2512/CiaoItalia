@@ -20,7 +20,7 @@
     +md
       width: calc(100% - 390px)
       margin: 0
-    +xs
+    +sm
       width: 100%
     &:nth-child(2)
       .icon-decor-line-bottom
@@ -42,8 +42,6 @@
       .icon-decor-line-top
         +md
           display: none
-
-
     &.is-active
       background: $orange
       color: #fff
@@ -56,7 +54,6 @@
       +sm
         float: none
         max-width: 100%
-      +xs
         margin-bottom: 30px
       #{$this}__btn
         pointer-events: auto
@@ -88,20 +85,14 @@
       #{$this}__decor-in
         +md
           padding: 20px 0 2px
-
-
   &__btn
     background: $gray
     color: #fff
     pointer-events: none
     padding-left: 35px
     padding-right: 35px
-
   &__decor
     margin: 0 0 40px 0
-    &:not(.is-active)
-      +md
-
     > .icon
       max-width: 192px
       width: 100%
@@ -117,7 +108,6 @@
     +md
       font-size: 36px
       line-height: 1.8
-
 
 .cost-additional
   font-size: 0
