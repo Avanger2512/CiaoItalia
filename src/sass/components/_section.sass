@@ -120,15 +120,15 @@
     background-color: $green
   &__width
     max-width: 400px
-    margin: 0 auto
+    margin: 0 170px 0 auto
     +md
       max-width: 525px
     .decor-block
-      margin: 35px 0
+      margin: 35px 0 30px
       +md
         margin: 15px 0 10px
   &__width_title
-    margin-bottom: 35px
+    margin-bottom: 40px
     +md
       margin-bottom: 10px
   &__relative
@@ -140,7 +140,7 @@
     background: $orange
   &__line_sm
     width: 230px
-    bottom: 335px
+    bottom: 340px
     right: -100px
     +md
       width: 110px
@@ -149,7 +149,7 @@
     +xs
       bottom: 255px
   &__line_md
-    width: 315px
+    width: 330px
     left: 0
     bottom: 218px
     +md
@@ -161,10 +161,11 @@
 
   &_vh
     height: calc(100vh - 141px)
-    +r(1400)
-      min-height: 750px
+    min-height: 750px
+    // +r(1400)
+    //   min-height: 750px
     +lg
-      min-height: 520px
+      min-height: 800px
     +md
       height: calc(100vh - 107px)
     +xs
@@ -174,7 +175,7 @@
       background-position: 25% -90px
 
   &_gup
-    padding: 80px 0 30px
+    padding: 70px 0 30px
     +md
       padding: 43px 0 30px
 
@@ -275,9 +276,12 @@
     max-width: 100%
   &__title
     margin-bottom: 40px
+    padding: 0 5px
     +md
       margin-bottom: 30px
   &__decor
-    margin: 40px 0 30px
+    margin: 40px 0
     +md
       margin: 30px 0
+  .places__in
+    margin-bottom: 60px

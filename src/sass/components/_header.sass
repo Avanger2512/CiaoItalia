@@ -1,5 +1,13 @@
 .header
   $this: &
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  min-width: 320px
+  z-index: 7
+  background: #fff
+  +tr(transform .3s ease-in-out)
   &.is-menu-open
     #{$this}__btn
       opacity: 0
@@ -7,6 +15,11 @@
       display: block
     #{$this}__soc
       display: block
+  &.is-scroll
+    transform: translateY(-41px)
+    #{$this}__nav
+      .nav__link
+        padding: 30px 0
   &__top
     padding: 10px 0
     border-bottom: 1px solid $green

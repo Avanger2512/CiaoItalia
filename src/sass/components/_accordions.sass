@@ -50,6 +50,8 @@
     &:first-child
       +md
         display: none
+    &:nth-child(2)
+      margin-left: -100px
     .h5
       +md
         line-height: 1.5
@@ -60,6 +62,7 @@
   &__text
     font-size: 12px
     text-transform: uppercase
+    letter-spacing: 2.1px
     +ubuntu-l
     > span
       padding: 0 5px
@@ -77,11 +80,11 @@
     flex-flow: row nowrap
     align-items: flex-start
     justify-content: flex-start
-    padding: 40px 0
+    padding: 35px 0 40px
     &:not(:last-child)
       border-bottom: 2px solid $light-gray
     &:last-child
-      padding-bottom: 80px
+      padding-bottom: 75px
       +md
         padding-bottom: 50px
     +md
@@ -104,7 +107,9 @@
     +md
       padding-right: 0
     .desc
-      margin-bottom: 30px
+      margin-bottom: 35px
+      &:last-child
+        margin-bottom: 0
       &:only-child
         margin-bottom: 0
       +md
@@ -126,6 +131,7 @@
       max-width: 100%
     .title-sm
       max-width: 280px
+      line-height: 1.5
       +md
         max-width: 100%
   &__line-diff
@@ -199,9 +205,14 @@
       margin-left: 5px
 
 .member
-  max-width: 180px
+  max-width: 200px
   width: 100%
+  display: block
+  padding: 5px 10px
+  +tr(background .2s)
   +clr
+  &:hover
+    background: rgba($black, .1)
   +md
     max-width: 100%
 
@@ -220,6 +231,8 @@
     +xs
       display: inline-block
       float: none
+    img
+      width: 100%
   &__name
     display: inline-block
     font-size: 16px
