@@ -47,17 +47,35 @@ citySlider.slick(options);
 
 let teamNext = teamSlider.parent().find('.js-slider-arr-next')
 let teamPrev = teamSlider.parent().find('.js-slider-arr-prev');
-if (teamCount > 5) {
-  teamSlider.slick(optionsTeam);
-  teamSlider.parent().addClass('is-slider-init');
 
-  teamPrev.on('click', function(e){
-    e.preventDefault();
-    teamSlider.slick('slickPrev');
-  });
+$(window).on('load resize orientationchange', function() {
+  if (teamCount > 5) {
+    if (!teamSlider.hasClass('slick-initialized')) {
+      teamSlider.slick(optionsTeam);
+      teamSlider.parent().addClass('is-slider-init');
+    }
+  } else {
+    if ($(window).width() > 979) {
+      if (teamSlider.hasClass('slick-initialized')) {
+        teamSlider.slick('unslick');
+        teamSlider.parent().removeClass('is-slider-init');
+      }
+    }
+    else{
+      if (!teamSlider.hasClass('slick-initialized')) {
+        teamSlider.slick(optionsTeam);
+        teamSlider.parent().addClass('is-slider-init');
+      }
+    }
+  }
+});
 
-  teamNext.on('click', function(e){
-    e.preventDefault();
-    teamSlider.slick('slickNext');
-  });
-}
+teamPrev.on('click', function(e){
+  e.preventDefault();
+  teamSlider.slick('slickPrev');
+});
+
+teamNext.on('click', function(e){
+  e.preventDefault();
+  teamSlider.slick('slickNext');
+});
