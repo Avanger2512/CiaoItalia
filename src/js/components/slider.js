@@ -9,7 +9,9 @@ let options = {
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: false,
-  dots: true
+  dots: true,
+  autoplay: true,
+  autoplaySpeed: 2000
 }
 
 let optionsTeam = {
@@ -36,8 +38,8 @@ let optionsTeam = {
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        centerMode: true,
-        variableWidth: true
+        // centerMode: true,
+        // variableWidth: true
       }
     }
   ]
