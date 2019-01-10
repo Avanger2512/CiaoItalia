@@ -9,16 +9,13 @@
   transition: background .2s, border-color .2s
   appearance: none
   +lora-i
-
   &_width
     width: 100%
-
   &_full-orange
     background: $orange
     color: #fff
     &:hover
       background: $dark-orange
-
   &_full-green
     background: $green
     color: #fff
@@ -26,43 +23,36 @@
       color: $green
       border-color: $green
       background: transparent
-
   &_full-white
     background: #fff
     color: $orange
     &:hover
       color: #fff
       background: $dark-orange
-
   &:disabled
     background: gray
     color: #fff
-
   &_border-orange
     border-color: $orange
     color: $orange
     &:hover
       background: $orange
       color: #fff
-
   &_border-white
     border-color: #fff
     color: #fff
     &:hover
       background: #fff
       color: $orange
-
   &_border-green
     border-color: $green
     color: $green
     &:hover
       background: $green
       color: #fff
-
   &_md
     font-size: 22px
     padding: 10px 20px
-
   &_sm-mob
     +md
       font-size: 16px

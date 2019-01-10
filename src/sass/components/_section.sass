@@ -3,14 +3,12 @@
   background-size: cover
   background-position: 50% 50%
   background-repeat: no-repeat
-
   &__item
     position: relative
     height: 100%
     .slider
       +xs
         display: none
-
   &__item_image
     background-size: cover
     background-position: 50% 50%
@@ -57,7 +55,6 @@
       padding: 0 10px
     +xs
       padding: 50px 10px
-
   &__col_orange
     background: $orange
   &__caption
@@ -135,7 +132,6 @@
       margin-bottom: 10px
   &__relative
     position: relative
-
   &__line
     position: absolute
     height: 2px
@@ -171,12 +167,9 @@
   &_hidden-img-xs
     +xs
       background-image: none
-
   &_vh
     height: calc(100vh - 141px)
     min-height: 750px
-    // +r(1400)
-    //   min-height: 750px
     +lg
       min-height: 800px
     +md
@@ -187,14 +180,10 @@
       height: auto
       background-size: 300%
       background-position: 25% -90px
-
   &_gup
     padding: 70px 0 30px
-    // +lg
-    //   padding: 80px 0 30px
     +md
       padding: 43px 0 30px
-
   &_image
     max-height: 890px
     +md
@@ -221,7 +210,6 @@
     max-width: 190px
     +r(1200)
       max-width: 96px
-
 
 .counter
   max-width: 600px

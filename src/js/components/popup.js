@@ -28,6 +28,7 @@ const POPUP = (function() {
       this._openButton.click(function(e) {
         e.preventDefault();
         let target = $(this).data('target');
+        BODY.attr( 'data-pos', $(window).scrollTop());
         that.open(target, $(this));
       });
     }
@@ -64,6 +65,7 @@ const POPUP = (function() {
     close() {
       BODY.removeClass(OVERFLOW);
       this._popup.removeClass(ACTIVE);
+      $( window ).scrollTop( BODY.attr( 'data-pos' ));
     }
 
     onOpen(callback) {
@@ -72,7 +74,7 @@ const POPUP = (function() {
   }
 
   let popup = new Popup();
-  
+
   return popup;
 
 })();
