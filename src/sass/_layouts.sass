@@ -21,7 +21,12 @@
       max-width: 100%
   &_sm
     max-width: 750px
-
+  &_height
+    height: calc(100vh - 141px - 90px)
+    +md
+      height: calc(100vh - 107px - 90px)
+    +xs
+      height: calc(100vh - 107px - 150px)
 .l
   display: flex
   flex-flow: row nowrap
