@@ -18,7 +18,7 @@
   {% for item in about %}
   <div class="about-tour__item about-tour__item_{{item.img}}">
     <div class="about-tour__img">
-      <img src="./img/{{ item.img }}.jpg" alt="">
+      <img src="#" class="lazy" data-src="./img/{{ item.img }}.jpg" alt="">
     </div>
     <div class="about-tour__content">
       {{mixins.icon('decor-line-top')}}

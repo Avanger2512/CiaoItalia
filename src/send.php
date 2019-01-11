@@ -1,6 +1,6 @@
 <?
 if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['tel'])&&$_POST['tel']!="")){
-        $to = 'den2512@ukr.net';
+        $to = 'office@goldwebsolutions.com';
         $subject = 'Обратный звонок - Ciao Italia';
         $message = '
                 <html>

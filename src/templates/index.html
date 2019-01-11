@@ -5,10 +5,10 @@ title: Index page
 
 {% block content %}
 
-	<section class="section section_vh" style="background-image: url('img/city.jpg')" >
+	<section class="section section_vh lazy" data-bg="url('img/city.jpg')" >
 		<div class="l l_stretch l_content-right l_half">
 			<div class="l__col">
-				<div class="section__item section__item_image text-center" style="background-image: url('img/city-2.jpg')">
+				<div class="section__item section__item_image text-center lazy" data-bg="url('img/city-2.jpg')">
 					<h1>«Ciao Italia!<br> Готуй і подорожуй»</h1>
 					<div class="desc-sm"> Бізнес-тур для менеджерів ресторанного бізнесу та всіх, хто хоче познайомитись з тонкощами італійської кухні!</div>
 
@@ -84,7 +84,7 @@ title: Index page
 				<div class="section__item">
 					<div class="slider js-slider-city">
 						{% for i in range(0,5) %}
-						<div><img src="./img/buildings.jpg" alt=""></div>
+						<div><img src="" class="lazy" data-src="./img/buildings.jpg" alt=""></div>
 						{% endfor %}
 					</div>
 				</div>
@@ -122,7 +122,7 @@ title: Index page
 			<ul class="image-list">
 				{% for item in imageList %}
 				<li class="image-list__item">
-					<img src="./img/{{ item.img }}.svg" alt="">
+					<img src="" class="lazy" data-src="./img/{{ item.img }}.svg" alt="">
 					<div class="desc-sm">{{ item.text }}</div>
 				</li>
 				{% endfor %}
@@ -140,7 +140,7 @@ title: Index page
 
 
 	<div class="bg-gray">
-		<section class="section section_image" style="background-image: url('./img/kitchen.jpg')">
+		<section class="section section_image lazy" data-bg="url('./img/kitchen.jpg')">
 			<div class="container">
 				<div class="section__meta meta">
 					<h3 class="">Приєднуйтесь  до нас!</h3>
@@ -167,10 +167,10 @@ title: Index page
 			</div>
 		</section>
 
-		<section class="section section_hidden-img-xs js-section" style="background-image: url('img/boats.jpg')"  data-id="program">
+		<section class="section section_hidden-img-xs js-section lazy" data-bg="url('img/boats.jpg')"  data-id="program">
 			<div class="l l_stretch l_content-left l_half">
 				<div class="l__col">
-					<div class="section__item section__item_image section__item_image-sm text-center" style="background-image: url('img/boats-2.jpg')">
+					<div class="section__item section__item_image section__item_image-sm text-center lazy" data-bg="url('img/boats-2.jpg')">
 						<div class="section__width">
 							<h2 class=" section__width_title">Програма туру</h2>
 
@@ -305,7 +305,6 @@ title: Index page
 					</div>
 				</div>
 				<div class="section__line section__line_md"></div>
-				<!-- <div class="section__line section__line_sm"></div> -->
 			</div>
 			<div class="l__col bg-black">
 				<form action="/" class="form js-form" id="callback" method="POST">
